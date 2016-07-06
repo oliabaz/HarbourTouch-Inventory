@@ -12,8 +12,6 @@
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
 		BFA98C121D2D481100F0E9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */; };
-		BFA98C1D1D2D481100F0E9FA /* HarborTouch_InventoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C1C1D2D481100F0E9FA /* HarborTouch_InventoryTests.swift */; };
-		BFA98C281D2D481100F0E9FA /* HarborTouch_InventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C271D2D481100F0E9FA /* HarborTouch_InventoryUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +40,7 @@
 		BFA98C111D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFA98C131D2D481100F0E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA98C181D2D481100F0E9FA /* HarborTouch InventoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFA98C1C1D2D481100F0E9FA /* HarborTouch_InventoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarborTouch_InventoryTests.swift; sourceTree = "<group>"; };
-		BFA98C1E1D2D481100F0E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA98C231D2D481100F0E9FA /* HarborTouch InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFA98C271D2D481100F0E9FA /* HarborTouch_InventoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarborTouch_InventoryUITests.swift; sourceTree = "<group>"; };
-		BFA98C291D2D481100F0E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				BFA98C061D2D481100F0E9FA /* HarborTouch Inventory */,
-				BFA98C1B1D2D481100F0E9FA /* HarborTouch InventoryTests */,
-				BFA98C261D2D481100F0E9FA /* HarborTouch InventoryUITests */,
 				BFA98C051D2D481100F0E9FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,24 +97,6 @@
 				BFA98C131D2D481100F0E9FA /* Info.plist */,
 			);
 			path = "HarborTouch Inventory";
-			sourceTree = "<group>";
-		};
-		BFA98C1B1D2D481100F0E9FA /* HarborTouch InventoryTests */ = {
-			isa = PBXGroup;
-			children = (
-				BFA98C1C1D2D481100F0E9FA /* HarborTouch_InventoryTests.swift */,
-				BFA98C1E1D2D481100F0E9FA /* Info.plist */,
-			);
-			path = "HarborTouch InventoryTests";
-			sourceTree = "<group>";
-		};
-		BFA98C261D2D481100F0E9FA /* HarborTouch InventoryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BFA98C271D2D481100F0E9FA /* HarborTouch_InventoryUITests.swift */,
-				BFA98C291D2D481100F0E9FA /* Info.plist */,
-			);
-			path = "HarborTouch InventoryUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA98C1D1D2D481100F0E9FA /* HarborTouch_InventoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA98C281D2D481100F0E9FA /* HarborTouch_InventoryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +456,7 @@
 				BFA98C2E1D2D481100F0E9FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFA98C2F1D2D481100F0E9FA /* Build configuration list for PBXNativeTarget "HarborTouch InventoryTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +465,7 @@
 				BFA98C311D2D481100F0E9FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFA98C321D2D481100F0E9FA /* Build configuration list for PBXNativeTarget "HarborTouch InventoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +474,7 @@
 				BFA98C341D2D481100F0E9FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
