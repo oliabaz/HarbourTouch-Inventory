@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "viewBgr.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "bigBlueButton@2x.png",
       "scale" : "2x"
     },
     {

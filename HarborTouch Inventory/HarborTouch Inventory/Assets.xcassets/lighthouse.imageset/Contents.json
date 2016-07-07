@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "lighthouse.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "loginImage@2x.png",
       "scale" : "2x"
     },
     {
