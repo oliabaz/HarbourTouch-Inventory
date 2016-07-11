@@ -12,8 +12,12 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var highConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lowConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     
     @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {    
     }
@@ -43,10 +47,12 @@ class LoginViewController: UIViewController {
     
     func adjustingHeight(show: Bool, notification: NSNotification) {
         if show {
-            highConstraint.constant = -160
+            highConstraint.constant = -135
+            lowConstraint.constant = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
             logoView.alpha = 0
         } else {
-            highConstraint.constant = 0
+            highConstraint.constant = 25
+            lowConstraint.constant = 10
             logoView.alpha = 1
         }
     }
@@ -56,11 +62,11 @@ class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == messageField {
-            passwordField.becomeFirstResponder()
-        } else {
+        if textField == passwordField {
             textField.resignFirstResponder()
             performSegueWithIdentifier("login", sender: self)
+        } else {
+            passwordField.becomeFirstResponder()
         }
         return true
     }
