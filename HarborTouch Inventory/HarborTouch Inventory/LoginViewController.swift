@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var highConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {    
     }
