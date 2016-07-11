@@ -90,13 +90,21 @@
 			isa = PBXGroup;
 			children = (
 				BFA98C071D2D481100F0E9FA /* AppDelegate.swift */,
-				BFF029771D2FB7A600961EC7 /* LoginViewController.swift */,
+				BFCCB0031D33953900D7BB9E /* LoginScreen */,
 				BFA98C0B1D2D481100F0E9FA /* Main.storyboard */,
 				BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */,
 				BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */,
 				BFA98C131D2D481100F0E9FA /* Info.plist */,
 			);
 			path = "HarborTouch Inventory";
+			sourceTree = "<group>";
+		};
+		BFCCB0031D33953900D7BB9E /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BFF029771D2FB7A600961EC7 /* LoginViewController.swift */,
+			);
+			name = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
