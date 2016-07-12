@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C071D2D481100F0E9FA /* AppDelegate.swift */; };
-		BFA98C0A1D2D481100F0E9FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C091D2D481100F0E9FA /* ViewController.swift */; };
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
 		BFA98C121D2D481100F0E9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */; };
+		BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF029771D2FB7A600961EC7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +34,13 @@
 /* Begin PBXFileReference section */
 		BFA98C041D2D481100F0E9FA /* HarborTouch Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarborTouch Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C071D2D481100F0E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFA98C091D2D481100F0E9FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFA98C0C1D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFA98C111D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFA98C131D2D481100F0E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA98C181D2D481100F0E9FA /* HarborTouch InventoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C231D2D481100F0E9FA /* HarborTouch InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF029771D2FB7A600961EC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,14 +89,30 @@
 		BFA98C061D2D481100F0E9FA /* HarborTouch Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				BFCCB0081D33B78F00D7BB9E /* Cotrollers */,
 				BFA98C071D2D481100F0E9FA /* AppDelegate.swift */,
-				BFA98C091D2D481100F0E9FA /* ViewController.swift */,
 				BFA98C0B1D2D481100F0E9FA /* Main.storyboard */,
 				BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */,
 				BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */,
 				BFA98C131D2D481100F0E9FA /* Info.plist */,
 			);
 			path = "HarborTouch Inventory";
+			sourceTree = "<group>";
+		};
+		BFCCB0031D33953900D7BB9E /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BFF029771D2FB7A600961EC7 /* LoginViewController.swift */,
+			);
+			name = LoginScreen;
+			sourceTree = "<group>";
+		};
+		BFCCB0081D33B78F00D7BB9E /* Cotrollers */ = {
+			isa = PBXGroup;
+			children = (
+				BFCCB0031D33953900D7BB9E /* LoginScreen */,
+			);
+			name = Cotrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA98C0A1D2D481100F0E9FA /* ViewController.swift in Sources */,
+				BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */,
 				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
