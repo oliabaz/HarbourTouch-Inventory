@@ -193,12 +193,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vul-5F-8cb">
-                                <rect key="frame" x="16" y="20" width="55" height="30"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <segue destination="w2I-bh-HFk" kind="unwind" unwindAction="unwindToLoginScreen:" id="eqw-Ar-8aB"/>
-                                </connections>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="viewBgr" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-sj-8Kt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ga5-ab-vPK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Menu" id="ycr-v8-o1y"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed1-lO-ANM">
+                                <rect key="frame" x="8" y="179" width="300" height="118"/>
+                                <state key="normal" backgroundImage="adjustLogo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-W2-pE8">
+                                <rect key="frame" x="8" y="304" width="300" height="118"/>
+                                <state key="normal" backgroundImage="storeLogo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgM-7O-87f">
+                                <rect key="frame" x="8" y="45" width="300" height="118"/>
+                                <state key="normal" backgroundImage="inventoryLogo"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,7 +225,6 @@
                     <size key="freeformSize" width="320" height="460"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpe-cs-y7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="w2I-bh-HFk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1175" y="402"/>
         </scene>
@@ -234,8 +250,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="adjustLogo" width="300" height="118"/>
         <image name="bigBlueButton" width="282" height="48"/>
+        <image name="inventoryLogo" width="300" height="118"/>
         <image name="logo" width="201" height="116"/>
+        <image name="storeLogo" width="300" height="118"/>
         <image name="viewBgr" width="320" height="406"/>
     </resources>
 </document>
