@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var highConstraint: NSLayoutConstraint!
@@ -18,9 +18,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
-    
-    @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {    
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +30,21 @@ class LoginViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+//        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+//        self.navigationController?.navigationBarHidden = false
+    }
+    
     func handleTap(sender: UIViewController) {
         view.endEditing(true)
     }
+    
+
     
     func keyboardWillShow(notification:NSNotification) {
         adjustingHeight(true, notification: notification)

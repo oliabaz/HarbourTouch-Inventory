@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22472F1D350B740094EE99 /* MenuViewController.swift */; };
+		BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */; };
+		BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */; };
+		BF22473F1D366ECC0094EE99 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22473E1D366ECC0094EE99 /* StoreCell.swift */; };
+		BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247411D3678FE0094EE99 /* BaseViewController.swift */; };
 		BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C071D2D481100F0E9FA /* AppDelegate.swift */; };
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
@@ -32,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF22472F1D350B740094EE99 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarStyle.swift; sourceTree = "<group>"; };
+		BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupViewController.swift; sourceTree = "<group>"; };
+		BF22473E1D366ECC0094EE99 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		BF2247411D3678FE0094EE99 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BFA98C041D2D481100F0E9FA /* HarborTouch Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarborTouch Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C071D2D481100F0E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA98C0C1D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +78,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF22472E1D350B600094EE99 /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF22472F1D350B740094EE99 /* MenuViewController.swift */,
+			);
+			name = MenuScreen;
+			sourceTree = "<group>";
+		};
+		BF2247371D351A7E0094EE99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF2247381D351A860094EE99 /* Extensions */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BF2247381D351A860094EE99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BF22473B1D3652240094EE99 /* StoreSetupScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */,
+			);
+			name = StoreSetupScreen;
+			sourceTree = "<group>";
+		};
+		BF2247401D3678D20094EE99 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BF2247411D3678FE0094EE99 /* BaseViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		BF2247431D3679260094EE99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF2247451D36929E0094EE99 /* Button */,
+				BF2247441D3692720094EE99 /* Cell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BF2247441D3692720094EE99 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF22473E1D366ECC0094EE99 /* StoreCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		BF2247451D36929E0094EE99 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		BFA98BFB1D2D481100F0E9FA = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +163,9 @@
 		BFA98C061D2D481100F0E9FA /* HarborTouch Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				BFCCB0081D33B78F00D7BB9E /* Cotrollers */,
+				BF2247431D3679260094EE99 /* View */,
+				BF2247371D351A7E0094EE99 /* Model */,
+				BFCCB0081D33B78F00D7BB9E /* Controller */,
 				BFA98C071D2D481100F0E9FA /* AppDelegate.swift */,
 				BFA98C0B1D2D481100F0E9FA /* Main.storyboard */,
 				BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */,
@@ -107,12 +183,15 @@
 			name = LoginScreen;
 			sourceTree = "<group>";
 		};
-		BFCCB0081D33B78F00D7BB9E /* Cotrollers */ = {
+		BFCCB0081D33B78F00D7BB9E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BF2247401D3678D20094EE99 /* Base */,
+				BF22473B1D3652240094EE99 /* StoreSetupScreen */,
+				BF22472E1D350B600094EE99 /* MenuScreen */,
 				BFCCB0031D33953900D7BB9E /* LoginScreen */,
 			);
-			name = Cotrollers;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */,
+				BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */,
+				BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */,
+				BF22473F1D366ECC0094EE99 /* StoreCell.swift in Sources */,
+				BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */,
+				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
 				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let navBarImage:UIImage! = UIImage(named: "navBar.png")
-        UINavigationBar.appearance().setBackgroundImage(navBarImage, forBarMetrics: .Default)
-
+        UINavigationBar.setNavBar()
+        
         return true
     }
 
