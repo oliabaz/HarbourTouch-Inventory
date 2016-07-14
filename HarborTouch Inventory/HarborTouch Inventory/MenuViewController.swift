@@ -9,15 +9,11 @@
 import UIKit
 
 class MenuViewController: BaseViewController {
-
-    @IBOutlet var logOutButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Menu"
-        logOutButton.setBackgroundImage(UIImage(named: "skipBtn"), forState: .Normal, barMetrics: .Default)
-        logOutButton.setTitleTextAttributes([NSFontAttributeName: (UIFont(name: "HelveticaNeue-Bold", size: 15))!], forState: .Normal)
     }
 
     @IBAction func onLogOut() {

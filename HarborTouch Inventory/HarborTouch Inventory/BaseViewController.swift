@@ -17,20 +17,10 @@ class BaseViewController: UIViewController {
         imageView.image = UIImage(named: "viewBgr")
         self.view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-        
-        setupRightButton()
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "1", style: .Plain, target: self, action: #selector(backAction))
-        navigationItem.leftBarButtonItem?.setBackgroundImage(UIImage(named: "backButton"), forState: .Normal, style: .Plain, barMetrics: .Default)
-        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: (UIFont(name: "HelveticaNeue-Bold", size: 15))!, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: .Normal)
-    }
-    
-    func backAction() {
-        navigationController?.popViewControllerAnimated(true)
     }
 
-    func setupRightButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "question")?.imageWithRenderingMode(.AlwaysOriginal), style: .Plain, target: self, action: nil)
+    @IBAction func backAction() {
+        navigationController?.popViewControllerAnimated(true)
     }
 
 }
