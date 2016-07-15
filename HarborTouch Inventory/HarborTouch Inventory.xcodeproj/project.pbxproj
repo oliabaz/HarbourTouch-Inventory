@@ -10,12 +10,12 @@
 		BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22472F1D350B740094EE99 /* MenuViewController.swift */; };
 		BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */; };
 		BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */; };
-		BF22473F1D366ECC0094EE99 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22473E1D366ECC0094EE99 /* StoreCell.swift */; };
 		BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247411D3678FE0094EE99 /* BaseViewController.swift */; };
 		BF22474B1D3779480094EE99 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474A1D3779480094EE99 /* LogoutButton.swift */; };
 		BF22474D1D377FE20094EE99 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474C1D377FE20094EE99 /* BackButton.swift */; };
 		BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474E1D3782CF0094EE99 /* QuestionButton.swift */; };
-		BF2247571D37B8060094EE99 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247561D37B8060094EE99 /* DepartmentCell.swift */; };
+		BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247581D38EBC30094EE99 /* StoreData.swift */; };
+		BF22475F1D39391B0094EE99 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22475D1D39354D0094EE99 /* StoreCell.swift */; };
 		BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C071D2D481100F0E9FA /* AppDelegate.swift */; };
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
@@ -44,12 +44,12 @@
 		BF22472F1D350B740094EE99 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarStyle.swift; sourceTree = "<group>"; };
 		BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupViewController.swift; sourceTree = "<group>"; };
-		BF22473E1D366ECC0094EE99 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		BF2247411D3678FE0094EE99 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BF22474A1D3779480094EE99 /* LogoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
 		BF22474C1D377FE20094EE99 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		BF22474E1D3782CF0094EE99 /* QuestionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
-		BF2247561D37B8060094EE99 /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
+		BF2247581D38EBC30094EE99 /* StoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
+		BF22475D1D39354D0094EE99 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		BFA98C041D2D481100F0E9FA /* HarborTouch Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarborTouch Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C071D2D481100F0E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA98C0C1D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,16 +97,17 @@
 		BF2247371D351A7E0094EE99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF2247581D38EBC30094EE99 /* StoreData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		BF2247381D351A860094EE99 /* Extensions */ = {
+		BF2247381D351A860094EE99 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */,
 			);
-			name = Extensions;
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		BF22473B1D3652240094EE99 /* StoreSetupScreen */ = {
@@ -128,7 +129,7 @@
 		BF2247431D3679260094EE99 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF2247381D351A860094EE99 /* Extensions */,
+				BF2247381D351A860094EE99 /* Extension */,
 				BF2247451D36929E0094EE99 /* Button */,
 				BF2247441D3692720094EE99 /* Cell */,
 			);
@@ -138,8 +139,7 @@
 		BF2247441D3692720094EE99 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BF22473E1D366ECC0094EE99 /* StoreCell.swift */,
-				BF2247561D37B8060094EE99 /* DepartmentCell.swift */,
+				BF22475D1D39354D0094EE99 /* StoreCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -337,15 +337,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2247571D37B8060094EE99 /* DepartmentCell.swift in Sources */,
+				BF22475F1D39391B0094EE99 /* StoreCell.swift in Sources */,
 				BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */,
 				BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */,
 				BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */,
 				BF22474B1D3779480094EE99 /* LogoutButton.swift in Sources */,
-				BF22473F1D366ECC0094EE99 /* StoreCell.swift in Sources */,
 				BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */,
 				BF22474D1D377FE20094EE99 /* BackButton.swift in Sources */,
 				BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */,
+				BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */,
 				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
 				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
 			);

@@ -10,7 +10,8 @@ import UIKit
 
 class StoreSetupViewController: BaseViewController {
     
-
+    let sourceData = StoreData()
+    
     @IBOutlet weak var storeTableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,16 +23,16 @@ class StoreSetupViewController: BaseViewController {
 extension StoreSetupViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DepartmentCell") as! DepartmentCell
-        cell.title = String(indexPath.row)
-        cell.backgroundView = tableView       
-        return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("storeCell")
+//        cell.backgroundView = UIImageView(image: UIImage(named: "cellMiddleBottom"))
+//        cell.storeItem = sourceData.storeItemForIndex(indexPath.row)
+        return cell!
     }
 }
 
 extension StoreSetupViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return StoreItems.itemsCount
     }
 }
