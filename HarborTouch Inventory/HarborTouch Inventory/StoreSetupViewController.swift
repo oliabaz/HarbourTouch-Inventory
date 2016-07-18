@@ -24,15 +24,27 @@ extension StoreSetupViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("storeCell") as! StoreCell
-        cell.backgroundView = self.tableView(tableView, backgroundForCellAtIndexPath: indexPath)
-        cell.storeItem = StoreData().storeItemForIndex(indexPath.row)
+        cell.backgroundView = tableView.setupCellBackground(indexPath)
+        cell.storeItem = sourceData.storeItemForIndex(indexPath.row)
         return cell
     }
 }
 
 extension StoreSetupViewController: UITableViewDataSource {
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return StoreItems.itemsCount
+        switch section {
+        case 0:
+            return StoreItems.itemsCount
+        case 1:
+            return StoreItems2.itemsCount2
+        default:
+            return 0
+        }
+        
     }
 }

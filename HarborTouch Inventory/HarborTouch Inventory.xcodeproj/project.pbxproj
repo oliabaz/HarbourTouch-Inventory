@@ -16,6 +16,8 @@
 		BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474E1D3782CF0094EE99 /* QuestionButton.swift */; };
 		BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247581D38EBC30094EE99 /* StoreData.swift */; };
 		BF22475F1D39391B0094EE99 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22475D1D39354D0094EE99 /* StoreCell.swift */; };
+		BF2247651D3CD6B40094EE99 /* UISwitchStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247641D3CD6B40094EE99 /* UISwitchStyle.swift */; };
+		BF2247671D3CEFEB0094EE99 /* UITableViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */; };
 		BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C071D2D481100F0E9FA /* AppDelegate.swift */; };
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		BF22474E1D3782CF0094EE99 /* QuestionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
 		BF2247581D38EBC30094EE99 /* StoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		BF22475D1D39354D0094EE99 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		BF2247641D3CD6B40094EE99 /* UISwitchStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchStyle.swift; sourceTree = "<group>"; };
+		BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewStyle.swift; sourceTree = "<group>"; };
 		BFA98C041D2D481100F0E9FA /* HarborTouch Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarborTouch Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C071D2D481100F0E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA98C0C1D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */,
+				BF2247641D3CD6B40094EE99 /* UISwitchStyle.swift */,
+				BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -344,6 +350,8 @@
 				BF22474B1D3779480094EE99 /* LogoutButton.swift in Sources */,
 				BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */,
 				BF22474D1D377FE20094EE99 /* BackButton.swift in Sources */,
+				BF2247651D3CD6B40094EE99 /* UISwitchStyle.swift in Sources */,
+				BF2247671D3CEFEB0094EE99 /* UITableViewStyle.swift in Sources */,
 				BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */,
 				BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */,
 				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
