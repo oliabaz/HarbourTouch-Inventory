@@ -16,18 +16,8 @@ enum StoreItems: Int {
         while let _ = StoreItems(rawValue: max) { max += 1 }
         return max
     }()
-    
-    func setupType()-> String {
-        switch self {
-        case .departments, .vendors, .taxes:
-            return "arrow"
-        case .cost, .lookup:
-            return "switch"
-        case .clear, .restore:
-            return "none"
-        }
-    }
 }
+
 
 class StoreData {
     
@@ -36,31 +26,38 @@ class StoreData {
         case .departments:
             return ["title": "Departments",
                     "subtitle": "15 configured",
-                    "icon": "dept"]
+                    "icon": "dept",
+                    "type": "arrow"]
         case .vendors:
             return ["title": "Vendors",
                     "subtitle": "0 configured",
-                    "icon": "vendors"]
+                    "icon": "vendors",
+                    "type": "arrow"]
         case .taxes:
             return ["title": "Taxes",
                     "subtitle": "12 configured",
-                    "icon": "taxes"]
+                    "icon": "taxes",
+                    "type": "arrow"]
         case .cost:
             return ["title": "Cost Tracing",
                     "subtitle": "",
-                    "icon": "cost"]
+                    "icon": "cost",
+                    "type": "toggle"]
         case .lookup:
             return ["title": "Look up item description",
                     "subtitle": "",
-                    "icon": "lookup"]
+                    "icon": "lookup",
+                    "type": "toggle"]
         case .clear:
             return ["title": "Clear Inventory",
                     "subtitle": "0 configured",
-                    "icon": ""]
+                    "icon": "",
+                    "type": "none"]
         case .restore:
             return ["title": "Restore from back up",
                     "subtitle": "",
-                    "icon": ""]
+                    "icon": "",
+                    "type": "none"]
         }
     }
 }

@@ -22,5 +22,23 @@ class BaseViewController: UIViewController {
     @IBAction func backAction() {
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    func tableView(tableView: UITableView, backgroundForCellAtIndexPath indexPath: NSIndexPath) -> UIImageView {
+        
+        let numberOrRows = tableView.numberOfRowsInSection(0)
+        if numberOrRows == 1 {
+            return UIImageView(image: UIImage(named: "singleCell"))
+        } else {
+            if indexPath.row == 0 {
+                return UIImageView(image: UIImage(named: "cellTop"))
+            }
+            if indexPath.row == numberOrRows - 1 {
+                return UIImageView(image: UIImage(named: "cellBottom"))
+            } else {
+                return UIImageView(image: UIImage(named: "cellMiddleBottom"))
+            }
+        }
+        
+    }
 
 }

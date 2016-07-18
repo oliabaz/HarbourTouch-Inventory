@@ -8,9 +8,16 @@
 
 import UIKit
 
+enum Type: String {
+    case arrow = "arrow", toggle = "toggle", none = "none"
+
+}
+
 class StoreCell: UITableViewCell {
     
-    let const = 56
+    let high: CGFloat = 0.0
+    let width: CGFloat = 0.0
+    var type: String?
     
     @IBOutlet private weak var cellImage: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -25,6 +32,33 @@ class StoreCell: UITableViewCell {
             titleLabel.text = storeItem!["title"]
             subtitleLabel.text = storeItem!["subtitle"]
             cellImage.image = UIImage(named: storeItem!["icon"]!)
+            type = storeItem!["type"]!
+            setupType()
+            setupLabels()
+        }
+    }
+    
+    func setupLabels() {
+        if cellImage.image == nil {
+            widthConstraint.constant = width
+        }
+        if subtitleLabel.text == "" {
+            highConstraint.constant = high
+        }
+        
+    }
+    
+    func setupType() {
+        switch Type(rawValue: type!)! {
+        case .arrow:
+            arrowImage.hidden = false
+            buttonSwitch.hidden = true
+        case .toggle:
+            arrowImage.hidden = true
+            buttonSwitch.hidden = false
+        case .none:
+            arrowImage.hidden = true
+            buttonSwitch.hidden = true
         }
     }
     

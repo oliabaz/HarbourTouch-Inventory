@@ -23,10 +23,10 @@ class StoreSetupViewController: BaseViewController {
 extension StoreSetupViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("storeCell")
-//        cell.backgroundView = UIImageView(image: UIImage(named: "cellMiddleBottom"))
-//        cell.storeItem = sourceData.storeItemForIndex(indexPath.row)
-        return cell!
+        let cell = tableView.dequeueReusableCellWithIdentifier("storeCell") as! StoreCell
+        cell.backgroundView = self.tableView(tableView, backgroundForCellAtIndexPath: indexPath)
+        cell.storeItem = StoreData().storeItemForIndex(indexPath.row)
+        return cell
     }
 }
 
