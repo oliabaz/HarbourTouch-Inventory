@@ -15,7 +15,7 @@ protocol DetailsDepartmentControllerDelegate: class {
 enum ResultSections: Int {
     case result = 0, input
     
-    static var ResultSectionsCount: Int = {
+    static var resultSectionsCount: Int = {
         var max: Int = 0
         while let _ = ResultSections(rawValue: max) { max += 1 }
         return max
@@ -36,8 +36,8 @@ class DetailsDepartmentController: BaseViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 10
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     override func adjustingHeight(show: Bool, notification: NSNotification) {
@@ -47,22 +47,18 @@ class DetailsDepartmentController: BaseViewController {
             lowConstraint.constant = 0
         }
     }
-
-    @IBAction func pressDone(sender: AnyObject) {
-        self.view.endEditing(true)
-    }
-
 }
 
 extension DetailsDepartmentController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        switch ResultSections(rawValue: indexPath.section)! {
+        case .result:
             let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
             cell.backgroundView = tableView.setupCellBackground(indexPath)
             cell.result = result[indexPath.row]
             return cell
-        } else {
+        case .input:
             let cell = tableView.dequeueReusableCellWithIdentifier("inputCell") as! InputCell
             cell.delegate = self
             return cell
@@ -73,7 +69,7 @@ extension DetailsDepartmentController: UITableViewDelegate {
 extension DetailsDepartmentController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return ResultSections.ResultSectionsCount
+        return ResultSections.resultSectionsCount
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,7 +89,7 @@ extension DetailsDepartmentController: UITableViewDataSource {
 
 extension DetailsDepartmentController: TextFieldEndEditing {    
     
-    func textFieldEndEditing(text: String) {
+    func inputCellEndEditing(text: String) {
         delegate?.showChoice(text)
         navigationController?.popViewControllerAnimated(true)
     }

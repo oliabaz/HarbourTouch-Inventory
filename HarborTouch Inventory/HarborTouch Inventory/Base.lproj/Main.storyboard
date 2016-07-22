@@ -439,7 +439,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="pressDone:" destination="CD4-YM-Gbl" eventType="touchUpInside" id="eF6-3Z-0DU"/>
+                                                        <action selector="onDoneAction" destination="suV-JQ-2dc" eventType="touchUpInside" id="MjP-bq-31k"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-pg-bET">
@@ -450,6 +450,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="suV-JQ-2dc" id="gLY-oe-NMc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

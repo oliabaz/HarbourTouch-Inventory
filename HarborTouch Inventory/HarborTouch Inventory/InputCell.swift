@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol  TextFieldEndEditing: class {
-    func textFieldEndEditing(text: String)
+protocol TextFieldEndEditing: class {
+    func inputCellEndEditing(text: String)
 }
 
 class InputCell: UITableViewCell {
@@ -22,19 +22,21 @@ class InputCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        textField.delegate = self
+    }
+    
+    @IBAction func onDoneAction() {
+        textField.resignFirstResponder()
+        delegate?.inputCellEndEditing(textField.text!)
     }
 }
 
 extension InputCell: UITextFieldDelegate {
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        if let text = textField.text {
-            delegate?.textFieldEndEditing(text)
-        } else {
-            delegate?.textFieldEndEditing("")
-        }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
+
 }
 
 

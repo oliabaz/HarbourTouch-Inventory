@@ -45,7 +45,7 @@ extension StoreSetupViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 15
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
