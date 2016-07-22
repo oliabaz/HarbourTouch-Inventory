@@ -18,6 +18,7 @@ class StoreSetupViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Store Setup"
     }
+
 }
 
 extension StoreSetupViewController: UITableViewDelegate {
@@ -28,12 +29,27 @@ extension StoreSetupViewController: UITableViewDelegate {
         cell.storeItem = sourceData.storeItemForIndex(indexPath.row)
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 0 {
+            performSegueWithIdentifier("department", sender: tableView)
+        }
+    }
 }
 
 extension StoreSetupViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: 0, height: 1)))
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,6 +61,5 @@ extension StoreSetupViewController: UITableViewDataSource {
         default:
             return 0
         }
-        
     }
 }

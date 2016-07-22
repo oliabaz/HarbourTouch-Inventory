@@ -151,10 +151,10 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="5Qu-4Y-Ole" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8dk-k6-AzC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Qu-4Y-Ole" secondAttribute="bottom" id="Gvh-xa-IiX"/>
-                            <constraint firstItem="5Qu-4Y-Ole" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="URQ-15-HOM"/>
-                            <constraint firstAttribute="trailing" secondItem="5Qu-4Y-Ole" secondAttribute="trailing" id="qrs-Pq-E7x"/>
+                            <constraint firstItem="5Qu-4Y-Ole" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AHQ-Nf-nUC"/>
+                            <constraint firstItem="5Qu-4Y-Ole" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EP8-xk-JCW"/>
+                            <constraint firstAttribute="trailing" secondItem="5Qu-4Y-Ole" secondAttribute="trailing" id="s78-6b-fcX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Qu-4Y-Ole" secondAttribute="bottom" id="sqz-Zx-gHV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BqK-sx-tfl"/>
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpe-cs-y7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="402"/>
+            <point key="canvasLocation" x="1580" y="412"/>
         </scene>
         <!--Store Setup View Controller-->
         <scene sceneID="Mdf-3Z-VTG">
@@ -274,23 +274,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gZr-Nt-jV5">
-                                <rect key="frame" x="20" y="79" width="280" height="381"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="gZr-Nt-jV5">
+                                <rect key="frame" x="20" y="64" width="280" height="396"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storeCell" id="V5u-py-KlW" customClass="StoreCell" customModule="HarborTouch_Inventory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="280" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="storeCell" id="V5u-py-KlW" customClass="StoreCell" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V5u-py-KlW" id="ASP-aS-Xay">
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-8J-2R0">
-                                                    <rect key="frame" x="60" y="0.0" width="161" height="25"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpo-K7-2TN">
                                                     <rect key="frame" x="60" y="22" width="161" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -309,6 +304,12 @@
                                                         <constraint firstAttribute="width" constant="46" id="Qrx-Bs-gxE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-8J-2R0">
+                                                    <rect key="frame" x="60" y="0.0" width="161" height="25"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -352,7 +353,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gZr-Nt-jV5" firstAttribute="top" secondItem="30m-6d-Gwj" secondAttribute="bottom" constant="15" id="Drf-ai-rgU"/>
+                            <constraint firstItem="gZr-Nt-jV5" firstAttribute="top" secondItem="30m-6d-Gwj" secondAttribute="bottom" id="KMc-cZ-mnW"/>
                             <constraint firstItem="gZr-Nt-jV5" firstAttribute="leading" secondItem="GLR-vi-iAI" secondAttribute="leading" constant="20" id="MeW-2S-klj"/>
                             <constraint firstItem="bSG-vt-src" firstAttribute="top" secondItem="gZr-Nt-jV5" secondAttribute="bottom" id="XI9-yi-UVU"/>
                             <constraint firstAttribute="trailing" secondItem="gZr-Nt-jV5" secondAttribute="trailing" constant="20" id="qSc-89-fzh"/>
@@ -370,11 +371,212 @@
                     <size key="freeformSize" width="320" height="460"/>
                     <connections>
                         <outlet property="storeTableView" destination="gZr-Nt-jV5" id="oCI-QJ-hXe"/>
+                        <segue destination="XZd-q4-QDv" kind="push" identifier="department" id="Bip-xK-A4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSr-yk-Ezx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013" y="388"/>
+            <point key="canvasLocation" x="2013" y="412"/>
+        </scene>
+        <!--Details Department Controller-->
+        <scene sceneID="iPn-Av-IMX">
+            <objects>
+                <viewController id="CD4-YM-Gbl" customClass="DetailsDepartmentController" customModule="HarborTouch_Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Gl-3b-KrA"/>
+                        <viewControllerLayoutGuide type="bottom" id="t3z-O1-HNX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MQU-Ei-MaO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nzz-gE-DaO">
+                                <rect key="frame" x="20" y="64" width="280" height="396"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="departmentCell" id="Ebm-sd-K7s" customClass="DepartmentCell" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ebm-sd-K7s" id="zgt-u5-JNe">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul0-D3-Vgb">
+                                                    <rect key="frame" x="10" y="10" width="260" height="23"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ul0-D3-Vgb" firstAttribute="top" secondItem="zgt-u5-JNe" secondAttribute="top" constant="10" id="Bgf-K9-7cL"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ul0-D3-Vgb" secondAttribute="bottom" constant="10" id="Ta4-04-Ss3"/>
+                                                <constraint firstItem="Ul0-D3-Vgb" firstAttribute="leading" secondItem="zgt-u5-JNe" secondAttribute="leading" constant="10" id="XEd-Ge-O3g"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ul0-D3-Vgb" secondAttribute="trailing" constant="10" id="dne-8l-qGF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="resultLabel" destination="Ul0-D3-Vgb" id="a8N-xn-ue1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" id="suV-JQ-2dc" customClass="InputCell" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="136" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="suV-JQ-2dc" id="eEa-jV-1wF">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RI-HX-E4N">
+                                                    <rect key="frame" x="221" y="6" width="59" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="59" id="sdy-QB-xDu"/>
+                                                        <constraint firstAttribute="height" constant="30" id="wDV-WV-l3e"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Done" backgroundImage="bigBlueButton">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pressDone:" destination="CD4-YM-Gbl" eventType="touchUpInside" id="eF6-3Z-0DU"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-pg-bET">
+                                                    <rect key="frame" x="0.0" y="6" width="208" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="208" id="diu-8n-a7R"/>
+                                                        <constraint firstAttribute="height" constant="31" id="wF0-ti-lMf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5RI-HX-E4N" firstAttribute="leading" secondItem="6Fh-pg-bET" secondAttribute="trailing" constant="13" id="IXf-PE-tSe"/>
+                                                <constraint firstItem="6Fh-pg-bET" firstAttribute="leading" secondItem="eEa-jV-1wF" secondAttribute="leading" id="Jvu-c6-AYO"/>
+                                                <constraint firstAttribute="bottom" secondItem="5RI-HX-E4N" secondAttribute="bottom" constant="7" id="Mvn-Ll-Reu"/>
+                                                <constraint firstItem="5RI-HX-E4N" firstAttribute="leading" secondItem="6Fh-pg-bET" secondAttribute="trailing" constant="13" id="YPm-Py-kZb"/>
+                                                <constraint firstItem="5RI-HX-E4N" firstAttribute="top" secondItem="eEa-jV-1wF" secondAttribute="top" constant="6" id="bbu-mN-OaL"/>
+                                                <constraint firstItem="6Fh-pg-bET" firstAttribute="top" secondItem="eEa-jV-1wF" secondAttribute="top" constant="6" id="hEN-9t-cQL"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Fh-pg-bET" secondAttribute="bottom" constant="6" id="xvO-Hd-dia"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="textField" destination="6Fh-pg-bET" id="enJ-eb-TVa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CD4-YM-Gbl" id="JH1-xU-HBf"/>
+                                    <outlet property="delegate" destination="CD4-YM-Gbl" id="l2D-EH-YXy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t3z-O1-HNX" firstAttribute="top" secondItem="Nzz-gE-DaO" secondAttribute="bottom" id="0fz-gn-KSR"/>
+                            <constraint firstItem="Nzz-gE-DaO" firstAttribute="leading" secondItem="MQU-Ei-MaO" secondAttribute="leading" constant="20" id="6E0-lx-X7k"/>
+                            <constraint firstItem="Nzz-gE-DaO" firstAttribute="top" secondItem="6Gl-3b-KrA" secondAttribute="bottom" id="IGs-yH-OLm"/>
+                            <constraint firstAttribute="trailing" secondItem="Nzz-gE-DaO" secondAttribute="trailing" constant="20" id="TrJ-sT-TZg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="D3p-Cr-5Ax">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="IB3-Kp-7Jz" customClass="BackButton" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backAction" destination="CD4-YM-Gbl" id="dFQ-vx-Kmb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lowConstraint" destination="0fz-gn-KSR" id="7fq-q7-1f9"/>
+                        <outlet property="tableView" destination="Nzz-gE-DaO" id="Ace-8V-5hU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnn-nR-sYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2416" y="1008"/>
+        </scene>
+        <!--Department View Controller-->
+        <scene sceneID="sK2-Hd-dLn">
+            <objects>
+                <viewController id="XZd-q4-QDv" customClass="DepartmentViewController" customModule="HarborTouch_Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gyn-CC-XuU"/>
+                        <viewControllerLayoutGuide type="bottom" id="9rf-Bl-evg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Oj-Ng-fy4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-KM-903" customClass="ChoiceButton" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                                <rect key="frame" x="20" y="99" width="280" height="30"/>
+                                <state key="normal" title="No results"/>
+                                <connections>
+                                    <action selector="requestResults:" destination="XZd-q4-QDv" eventType="touchUpInside" id="WbS-1b-wbX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZm-EK-MVm" customClass="ChoiceButton" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                                <rect key="frame" x="20" y="144" width="280" height="30"/>
+                                <state key="normal" title="One result"/>
+                                <connections>
+                                    <action selector="requestResults:" destination="XZd-q4-QDv" eventType="touchUpInside" id="eI8-ZG-Xqv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmp-Kh-V6C" customClass="ChoiceButton" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                                <rect key="frame" x="20" y="189" width="280" height="30"/>
+                                <state key="normal" title="Several results"/>
+                                <connections>
+                                    <action selector="requestResults:" destination="XZd-q4-QDv" eventType="touchUpInside" id="870-WD-xHJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysc-Yy-cZB">
+                                <rect key="frame" x="20" y="239" width="280" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="Ytb-gz-KlW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fmp-Kh-V6C" firstAttribute="top" secondItem="cZm-EK-MVm" secondAttribute="bottom" constant="15" id="1rc-sy-o1s"/>
+                            <constraint firstAttribute="trailing" secondItem="fmp-Kh-V6C" secondAttribute="trailing" constant="20" id="3eY-qF-QIj"/>
+                            <constraint firstItem="cZm-EK-MVm" firstAttribute="leading" secondItem="0Oj-Ng-fy4" secondAttribute="leading" constant="20" id="8Dh-qP-DeV"/>
+                            <constraint firstItem="fmp-Kh-V6C" firstAttribute="leading" secondItem="0Oj-Ng-fy4" secondAttribute="leading" constant="20" id="IEo-3s-zvx"/>
+                            <constraint firstAttribute="trailing" secondItem="cZm-EK-MVm" secondAttribute="trailing" constant="20" id="KJu-jb-48F"/>
+                            <constraint firstItem="KGi-KM-903" firstAttribute="top" secondItem="Gyn-CC-XuU" secondAttribute="bottom" constant="35" id="TZQ-vi-ayx"/>
+                            <constraint firstItem="cZm-EK-MVm" firstAttribute="top" secondItem="KGi-KM-903" secondAttribute="bottom" constant="15" id="X67-ny-8jR"/>
+                            <constraint firstAttribute="trailing" secondItem="KGi-KM-903" secondAttribute="trailing" constant="20" id="dmm-yK-JkL"/>
+                            <constraint firstItem="KGi-KM-903" firstAttribute="leading" secondItem="0Oj-Ng-fy4" secondAttribute="leading" constant="20" id="e2X-v4-OEL"/>
+                            <constraint firstItem="Ysc-Yy-cZB" firstAttribute="leading" secondItem="0Oj-Ng-fy4" secondAttribute="leading" constant="20" id="gAU-kA-dEj"/>
+                            <constraint firstItem="cZm-EK-MVm" firstAttribute="height" secondItem="fmp-Kh-V6C" secondAttribute="height" id="h1G-NP-TNl"/>
+                            <constraint firstItem="Ysc-Yy-cZB" firstAttribute="top" secondItem="fmp-Kh-V6C" secondAttribute="bottom" constant="20" id="jsm-Au-ia3"/>
+                            <constraint firstItem="KGi-KM-903" firstAttribute="height" secondItem="cZm-EK-MVm" secondAttribute="height" id="k4x-Cd-AHq"/>
+                            <constraint firstAttribute="trailing" secondItem="Ysc-Yy-cZB" secondAttribute="trailing" constant="20" id="rsQ-YH-03V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O1z-Ot-xJs">
+                        <barButtonItem key="leftBarButtonItem" title="Store Setup" id="GKN-xu-0pY" customClass="BackButton" customModule="HarborTouch_Inventory" customModuleProvider="target">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backAction" destination="XZd-q4-QDv" id="ddz-Me-J5A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="resultLabel" destination="Ysc-Yy-cZB" id="iFL-gB-ebO"/>
+                        <segue destination="CD4-YM-Gbl" kind="push" identifier="details" id="2LI-9k-uHS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42g-FC-tte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013" y="1008"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ag2-rY-8sm">

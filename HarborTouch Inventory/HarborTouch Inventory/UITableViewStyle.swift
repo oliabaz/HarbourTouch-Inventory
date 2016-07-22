@@ -11,8 +11,7 @@ import UIKit
 extension UITableView {
     
     func setupCellBackground(indexPath: NSIndexPath) -> UIImageView {
-        
-        
+    
         let numberOfRows = self.numberOfRowsInSection(indexPath.section)
         if numberOfRows == 1 {
             return UIImageView(image: UIImage(named: "singleCell"))
@@ -26,6 +25,5 @@ extension UITableView {
                 return UIImageView(image: UIImage(named: "cellMiddleBottom"))
             }
         }
-        
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-
+    
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var highConstraint: NSLayoutConstraint!
     @IBOutlet weak var lowConstraint: NSLayoutConstraint!
@@ -27,34 +27,13 @@ class LoginViewController: BaseViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
-
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-//        self.navigationController?.navigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(animated: Bool)
-    {
-        super.viewWillDisappear(animated)
-//        self.navigationController?.navigationBarHidden = false
     }
     
     func handleTap(sender: UIViewController) {
         view.endEditing(true)
     }
     
-
-    
-    func keyboardWillShow(notification:NSNotification) {
-        adjustingHeight(true, notification: notification)
-    }
-    
-    func keyboardWillHide(notification:NSNotification) {
-        adjustingHeight(false, notification: notification)
-    }
-    
-    func adjustingHeight(show: Bool, notification: NSNotification) {
+    override func adjustingHeight(show: Bool, notification: NSNotification) {
         if show {
             highConstraint.constant = -135
             lowConstraint.constant = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
@@ -65,7 +44,6 @@ class LoginViewController: BaseViewController {
             logoView.alpha = 1
         }
     }
-    
 }
 
 extension LoginViewController: UITextFieldDelegate {
@@ -79,5 +57,4 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
-       
 }
