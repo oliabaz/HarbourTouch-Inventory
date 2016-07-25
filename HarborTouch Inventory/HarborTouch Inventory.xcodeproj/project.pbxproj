@@ -27,6 +27,8 @@
 		BF3E989E1D3F8A0900F2C1AF /* RequestModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */; };
 		BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */; };
 		BF3E98A41D41130700F2C1AF /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A31D41130700F2C1AF /* InputCell.swift */; };
+		BF3E98A71D45E36D00F2C1AF /* OneResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */; };
+		BF3E98A91D464F7900F2C1AF /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A81D464F7900F2C1AF /* BaseTableController.swift */; };
 		BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C071D2D481100F0E9FA /* AppDelegate.swift */; };
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModal.swift; sourceTree = "<group>"; };
 		BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
 		BF3E98A31D41130700F2C1AF /* InputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
+		BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneResultViewController.swift; sourceTree = "<group>"; };
+		BF3E98A81D464F7900F2C1AF /* BaseTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableController.swift; sourceTree = "<group>"; };
 		BFA98C041D2D481100F0E9FA /* HarborTouch Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarborTouch Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C071D2D481100F0E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA98C0C1D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2247411D3678FE0094EE99 /* BaseViewController.swift */,
+				BF3E98A81D464F7900F2C1AF /* BaseTableController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -232,6 +237,14 @@
 			name = DetailsDepartmentScreen;
 			sourceTree = "<group>";
 		};
+		BF3E98A51D45E33200F2C1AF /* OneResultScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */,
+			);
+			name = OneResultScreen;
+			sourceTree = "<group>";
+		};
 		BFA98BFB1D2D481100F0E9FA = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +292,7 @@
 		BFCCB0081D33B78F00D7BB9E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BF3E98A51D45E33200F2C1AF /* OneResultScreen */,
 				BF22478A1D3E41FC0094EE99 /* DetailsDepartmentScreen */,
 				BF2247871D3E252E0094EE99 /* DepartmentScreen */,
 				BF2247401D3678D20094EE99 /* Base */,
@@ -556,6 +570,7 @@
 				BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */,
 				BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */,
 				BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */,
+				BF3E98A71D45E36D00F2C1AF /* OneResultViewController.swift in Sources */,
 				BF22474B1D3779480094EE99 /* LogoutButton.swift in Sources */,
 				BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */,
 				BF22474D1D377FE20094EE99 /* BackButton.swift in Sources */,
@@ -569,6 +584,7 @@
 				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
 				BF22478C1D3E42300094EE99 /* DetailsDepartmentController.swift in Sources */,
 				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
+				BF3E98A91D464F7900F2C1AF /* BaseTableController.swift in Sources */,
 				BF3E989E1D3F8A0900F2C1AF /* RequestModal.swift in Sources */,
 				BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */,
 			);

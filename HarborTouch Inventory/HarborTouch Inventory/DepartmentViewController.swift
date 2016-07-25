@@ -7,6 +7,9 @@
 //
 
 import UIKit
+enum ResultAmount: Int {
+    case none = 0, one
+}
 
 class DepartmentViewController: BaseViewController {
     
@@ -21,7 +24,10 @@ class DepartmentViewController: BaseViewController {
     @IBAction func requestResults(sender: ChoiceButton) {
         
         RequestModel.requestDescription(sender.tag){ (result: [String]) -> Void in
-            if result.count > 0 {
+            if result.count == 1 {
+                self.transferResult = result
+                self.performSegueWithIdentifier("oneResult", sender: self)
+            } else if result.count > 1 {
                 self.transferResult = result
                 self.performSegueWithIdentifier("details", sender: self)
             } else {
@@ -31,13 +37,19 @@ class DepartmentViewController: BaseViewController {
             }
         }
     }
-    
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "details" {
             let destinationVC = segue.destinationViewController as! DetailsDepartmentController
             destinationVC.result = transferResult
             destinationVC.delegate = self
+        }
+        if segue.identifier == "oneResult" {
+            let destinationVC = segue.destinationViewController as! OneResultViewController
+            destinationVC.result = transferResult
+            destinationVC.delegate = self
+        }
     }
 }
 

@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum StoreSections: Int {
+    case StoreItems = 0, StoreItems2
+}
+
 class StoreSetupViewController: BaseViewController {
     
     let sourceData = StoreData()
@@ -31,9 +35,14 @@ extension StoreSetupViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if indexPath.row == 0 {
-            performSegueWithIdentifier("department", sender: tableView)
+        switch StoreSections(rawValue: indexPath.section)! {
+        case .StoreItems:
+            switch StoreItems(rawValue: indexPath.row)! {
+            case .departments:
+                performSegueWithIdentifier("department", sender: tableView)
+            default: break
+            }
+        default: break
         }
     }
 }

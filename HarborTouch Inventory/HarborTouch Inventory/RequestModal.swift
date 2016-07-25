@@ -14,7 +14,6 @@ class RequestModel {
         var result = [String]()
         Alamofire.request(.GET, Constants.barCodeUrl + Constants.barCodes[barCode]).responseJSON { (response) -> Void in
             guard response.result.isSuccess else {
-//                complitionHandler(result)
                 return
             }
             let value = response.result.value as? [String: AnyObject]

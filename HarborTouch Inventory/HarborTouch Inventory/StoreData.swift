@@ -61,7 +61,6 @@ class StoreData {
         case .restore:
             return ["title": "Restore from back up",
                     "type": "none"]
-    
         }
     }
     
@@ -77,7 +76,6 @@ class StoreData {
                     "subtitle": "0 configured",
                     "icon": "vendors",
                     "type": "arrow"]
-            
         }
     }
 }
