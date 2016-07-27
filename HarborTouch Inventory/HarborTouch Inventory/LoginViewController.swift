@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: BaseViewController {
     
@@ -19,6 +20,10 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
+    @IBAction func onLoginAction(sender: AnyObject) {
+        HarbortouchRequest.requestDescription()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +38,10 @@ class LoginViewController: BaseViewController {
     }
     
     override func adjustingHeight(show: Bool, notification: NSNotification) {
+        if notification.userInfo == nil {
+            return
+        }
+        
         if show {
             highConstraint.constant = -135
             lowConstraint.constant = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!

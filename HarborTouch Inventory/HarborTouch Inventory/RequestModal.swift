@@ -16,6 +16,7 @@ class RequestModel {
             guard response.result.isSuccess else {
                 return
             }
+            print(response)
             let value = response.result.value as? [String: AnyObject]
             result = value!["items"] as! [String]
             complitionHandler(result)

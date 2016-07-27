@@ -26,7 +26,6 @@ class BaseViewController: UIViewController {
     func setupKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
-
     }
     
     func keyboardWillShow(notification:NSNotification) {
@@ -39,10 +38,5 @@ class BaseViewController: UIViewController {
     
     func adjustingHeight(show: Bool, notification: NSNotification) {
         
-    }
-    
-    func setupSelfResizeCell(tableView: UITableView) {
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 10
     }
 }

@@ -31,6 +31,11 @@ class BaseTableController: BaseViewController {
         delegate?.showChoice(choice)
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    func setupSelfResizeCell(tableView: UITableView) {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 10
+    }
 }
 
 extension BaseTableController: UITableViewDelegate {

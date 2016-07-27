@@ -22,7 +22,6 @@ class StoreSetupViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Store Setup"
     }
-
 }
 
 extension StoreSetupViewController: UITableViewDelegate {

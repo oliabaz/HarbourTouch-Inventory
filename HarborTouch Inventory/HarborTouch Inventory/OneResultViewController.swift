@@ -10,48 +10,64 @@ import UIKit
 
 class OneResultViewController: BaseTableController {
 
-    @IBOutlet weak var lowConstraint: NSLayoutConstraint!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet private weak var lowConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
     var keyboardTextField: UITextField!
+    var addButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        setupNavigationBarButton(.Compose)
         setupSelfResizeCell(tableView)
         setupKeyboardNotifications()
-        textField.hidden = true
         
-        keyboardTextField = UITextField(frame: CGRectMake(0,0,200,30))
+        keyboardTextField = UITextField(frame: CGRectMake(10,10,view.frame.width - 110,30))
         keyboardTextField.borderStyle = .RoundedRect
         keyboardTextField.delegate = self
         
-        let textFieldButton = UIBarButtonItem(customView: keyboardTextField)
-        
         let toolbar = UIToolbar()
-        toolbar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 30)
+        toolbar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 45)
+        toolbar.barTintColor = UIColor.blackColor()
         let done = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(onDoneAction))
-        toolbar.setItems([textFieldButton, done], animated: false)
+        done.setTitleTextAttributes([NSFontAttributeName: (UIFont(name: "HelveticaNeue-Bold", size: 15))!], forState: .Normal)
+        done.tintColor = UIColor.whiteColor()
+        done.setBackgroundImage(UIImage(named: "bigBlueButton"), forState: .Normal, barMetrics: .Default)
+        
         toolbar.addSubview(keyboardTextField)
-//        toolbar.addSubview(done)
-        textField.inputAccessoryView = toolbar
+        toolbar.setItems([UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil), done], animated: false)
+        keyboardTextField.inputAccessoryView = toolbar
     }
-   
+
+    func setupNavigationBarButton(style: UIBarButtonSystemItem) {
+        addButton = UIBarButtonItem(barButtonSystemItem: style, target: self, action: #selector(onAddAction))
+        addButton.tintColor = UIColor.whiteColor()
+        navigationItem.rightBarButtonItem = addButton
+    }
+
+    
     func onDoneAction() {
         self.view.endEditing(true)
         delegate?.showChoice(keyboardTextField.text!)
         navigationController?.popViewControllerAnimated(true)
     }
-    
-    @IBAction func onAddAction(sender: AnyObject) {
-        textField.becomeFirstResponder()
-        keyboardTextField.becomeFirstResponder()
+
+    func onAddAction() {
+        if keyboardTextField.isFirstResponder() {
+            keyboardTextField.resignFirstResponder()
+            self.view.endEditing(true)
+            setupNavigationBarButton(.Compose)
+        } else {
+            keyboardTextField.becomeFirstResponder()
+            setupNavigationBarButton(.Reply)
+        }
     }
 }
 
 extension OneResultViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        keyboardTextField.resignFirstResponder()
+        onDoneAction()
         return true
     }
 }

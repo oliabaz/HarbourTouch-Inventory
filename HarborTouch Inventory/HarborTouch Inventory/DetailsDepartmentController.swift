@@ -12,6 +12,7 @@ class DetailsDepartmentController: BaseTableController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var lowConstraint: NSLayoutConstraint!
+    @IBOutlet var highConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,9 @@ class DetailsDepartmentController: BaseTableController {
     
     override func adjustingHeight(show: Bool, notification: NSNotification) {
         if show {
-            lowConstraint.constant = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
+            tableView.frame.size.height = tableView.frame.height - (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
         } else {
-            lowConstraint.constant = 0
+            tableView.frame.size.height = tableView.frame.height + (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
         }
     }
 }
