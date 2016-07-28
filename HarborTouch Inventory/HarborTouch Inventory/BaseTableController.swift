@@ -31,14 +31,9 @@ class BaseTableController: BaseViewController {
         delegate?.showChoice(choice)
         navigationController?.popViewControllerAnimated(true)
     }
-    
-    func setupSelfResizeCell(tableView: UITableView) {
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 10
-    }
 }
 
-extension BaseTableController: UITableViewDelegate {
+extension BaseTableController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch ResultSections(rawValue: section)! {
@@ -48,15 +43,20 @@ extension BaseTableController: UITableViewDelegate {
             return 1
         }
     }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        sendChoice(result[indexPath.row])
-    }
 }
 
-extension BaseTableController: TextFieldEndEditing {
+//extension BaseViewController: UITableViewDelegate {
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
+//        cell.backgroundView = tableView.setupCellBackground(indexPath)
+//        return cell
+//    }
+//}
+
+extension BaseTableController: InputCellDelegate {
     
-    func inputCellEndEditing(text: String) {
+    func inputCellTextEndEditing(text: String) {
         sendChoice(text)
     }
 }

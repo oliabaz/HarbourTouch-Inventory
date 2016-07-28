@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class BaseViewController: UIViewController {
 
@@ -39,4 +40,20 @@ class BaseViewController: UIViewController {
     func adjustingHeight(show: Bool, notification: NSNotification) {
         
     }
+    
+//    func receiveItemsFromDataBase() -> ([NSManagedObject], NSManagedObjectContext) {
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedContext = appDelegate.managedObjectContext
+//        let fetchRequest = NSFetchRequest(entityName: "Inventory")
+//        
+//        var items = [NSManagedObject]()
+//        
+//        do {
+//            let results = try managedContext.executeFetchRequest(fetchRequest)
+//            items = results as! [NSManagedObject]
+//        } catch let error as NSError {
+//            print("Could not fetch \(error), \(error.userInfo)")
+//        }
+//        return (items, managedContext)
+//    }
 }

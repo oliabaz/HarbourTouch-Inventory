@@ -21,7 +21,34 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var emailField: UITextField!
     
     @IBAction func onLoginAction(sender: AnyObject) {
-        HarbortouchRequest.requestDescription()
+        RequestModel.requestInventory(){ (requestResult) -> Void in
+//            var items: [NSManagedObject]
+//            var managedContext: NSManagedObjectContext
+//
+//            (items, managedContext) = self.receiveItemsFromDataBase()
+//            for item in items {
+//                managedContext.deleteObject(item)
+//                AppDelegate().saveContext()
+//            }
+//            for item in requestResult {
+//                let entity = NSEntityDescription.entityForName("Inventory", inManagedObjectContext: managedContext)
+//                let inventory = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+//                for (key, value) in item {
+//                    if value is String || value is NSNumber {
+//                        inventory.setValue(value, forKey: key)
+//                    } else {
+//                        inventory.setValue(nil, forKey: key)
+//                    }
+//                    do {
+//                        try managedContext.save()
+//                        items.append(inventory)
+//                    } catch let error as NSError {
+//                        print("Could not save \(error)")
+//                    }
+//                }
+//            }
+            self.performSegueWithIdentifier("login", sender: self)
+        }
     }
 
     override func viewDidLoad() {

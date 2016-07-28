@@ -26,4 +26,9 @@ extension UITableView {
             }
         }
     }
+    
+    func setupResizingCell() {
+        rowHeight = UITableViewAutomaticDimension
+        estimatedRowHeight = 10
+    }
 }

@@ -11,29 +11,17 @@ import CoreData
 
 class InventoryListViewController: BaseTableController {
     
-    var inventory = [NSManagedObject]()
+    var inventory = [InventoryData]()
     
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupSelfResizeCell(tableView)
+        tableView.setupResizingCell()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "Person")
-
-        do {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            inventory = results as! [NSManagedObject]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
     }
 }
 
@@ -46,7 +34,7 @@ extension InventoryListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("inventoryCell") as! InventoryCell
         cell.backgroundView = tableView.setupCellBackground(indexPath)
-        
+ 
         return cell
     }
 }

@@ -17,7 +17,7 @@ class DetailsDepartmentController: BaseTableController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupSelfResizeCell(tableView)
+        tableView.setupResizingCell()
         setupKeyboardNotifications()
     }
     
@@ -30,9 +30,9 @@ class DetailsDepartmentController: BaseTableController {
     }
 }
 
-extension DetailsDepartmentController: UITableViewDataSource{
+extension DetailsDepartmentController: UITableViewDataSource {
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch ResultSections(rawValue: indexPath.section)! {
         case .result:
             let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
@@ -48,5 +48,9 @@ extension DetailsDepartmentController: UITableViewDataSource{
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return ResultSections.resultSectionsCount
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        sendChoice(result[indexPath.row])
     }
 }

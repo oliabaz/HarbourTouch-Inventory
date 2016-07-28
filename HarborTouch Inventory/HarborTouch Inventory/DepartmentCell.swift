@@ -17,10 +17,4 @@ class DepartmentCell: UITableViewCell {
             resultLabel.text = result
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 }

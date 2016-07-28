@@ -19,7 +19,7 @@ class OneResultViewController: BaseTableController {
         super.viewDidLoad()
                 
         setupNavigationBarButton(.Compose)
-        setupSelfResizeCell(tableView)
+        tableView.setupResizingCell()
         setupKeyboardNotifications()
         
         keyboardTextField = UITextField(frame: CGRectMake(10,10,view.frame.width - 110,30))
@@ -70,6 +70,10 @@ extension OneResultViewController: UITextFieldDelegate {
         onDoneAction()
         return true
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        sendChoice(result[indexPath.row])
+    }
 }
 
 extension OneResultViewController: UITableViewDataSource {
@@ -80,4 +84,5 @@ extension OneResultViewController: UITableViewDataSource {
         cell.result = result[indexPath.row]
         return cell
     }
+    
 }

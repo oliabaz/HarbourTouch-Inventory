@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol TextFieldEndEditing: class {
-    func inputCellEndEditing(text: String)
+protocol InputCellDelegate: class {
+    func inputCellTextEndEditing(text: String)
 }
 
 class InputCell: UITableViewCell {
     
     @IBOutlet private weak var textField: UITextField!
     
-    weak var delegate: TextFieldEndEditing?
+    weak var delegate: InputCellDelegate?
     
     var string: String!
     
@@ -26,7 +26,7 @@ class InputCell: UITableViewCell {
     
     @IBAction func onDoneAction() {
         textField.resignFirstResponder()
-        delegate?.inputCellEndEditing(textField.text!)
+        delegate?.inputCellTextEndEditing(textField.text!)
     }
 }
 

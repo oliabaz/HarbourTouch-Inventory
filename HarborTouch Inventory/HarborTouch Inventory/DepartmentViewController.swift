@@ -54,7 +54,7 @@ class DepartmentViewController: BaseViewController {
 }
 
 extension DepartmentViewController: DetailsDepartmentControllerDelegate {
-    
+
     func showChoice(choice: String) {
         resultLabel.text = choice
     }

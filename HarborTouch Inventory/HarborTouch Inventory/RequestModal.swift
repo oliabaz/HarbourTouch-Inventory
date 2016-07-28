@@ -10,16 +10,26 @@ import Alamofire
 
 class RequestModel {
     
-    static func requestDescription(barCode: Int, complitionHandler: ([String]) -> Void ) {
+    static func requestDescription(barCode: Int, completionHandler: ([String]) -> Void ) {
         var result = [String]()
         Alamofire.request(.GET, Constants.barCodeUrl + Constants.barCodes[barCode]).responseJSON { (response) -> Void in
             guard response.result.isSuccess else {
                 return
             }
-            print(response)
             let value = response.result.value as? [String: AnyObject]
             result = value!["items"] as! [String]
-            complitionHandler(result)
+            completionHandler(result)
+        }
+    }
+    
+    static func requestInventory(completionHandler: ([[String: AnyObject]]) -> Void) {
+        Alamofire.request(.GET, Constants.kApiUrl + Constants.kApiPrefix + Constants.kApiItems, headers: ["X-Access-Token": Constants.kUserToken]).responseJSON {
+            (response) -> Void in
+            guard response.result.isSuccess else {
+                return
+            }
+            let values = response.result.value as! [[String: AnyObject]]
+            completionHandler(values)
         }
     }
 }
