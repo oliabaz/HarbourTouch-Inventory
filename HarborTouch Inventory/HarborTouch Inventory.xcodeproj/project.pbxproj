@@ -22,13 +22,13 @@
 		BF2247671D3CEFEB0094EE99 /* UITableViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */; };
 		BF2247861D3E1F970094EE99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247851D3E1F970094EE99 /* Constants.swift */; };
 		BF2247891D3E256E0094EE99 /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */; };
-		BF22478C1D3E42300094EE99 /* DetailsDepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478B1D3E42300094EE99 /* DetailsDepartmentController.swift */; };
+		BF22478C1D3E42300094EE99 /* SeveralResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */; };
 		BF22478E1D3E44A00094EE99 /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */; };
 		BF3E989E1D3F8A0900F2C1AF /* RequestModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */; };
 		BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */; };
 		BF3E98A41D41130700F2C1AF /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A31D41130700F2C1AF /* InputCell.swift */; };
 		BF3E98A71D45E36D00F2C1AF /* OneResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */; };
-		BF3E98A91D464F7900F2C1AF /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A81D464F7900F2C1AF /* BaseTableController.swift */; };
+		BF3E98A91D464F7900F2C1AF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */; };
 		BF3E98AE1D47A61900F2C1AF /* InventoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98AD1D47A61900F2C1AF /* InventoryListViewController.swift */; };
 		BF3E98B41D48AF7200F2C1AF /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98B31D48AF7200F2C1AF /* InventoryCell.swift */; };
 		BF3E98B71D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98B51D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld */; };
@@ -78,13 +78,13 @@
 		BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewStyle.swift; sourceTree = "<group>"; };
 		BF2247851D3E1F970094EE99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
-		BF22478B1D3E42300094EE99 /* DetailsDepartmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsDepartmentController.swift; sourceTree = "<group>"; };
+		BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeveralResultsViewController.swift; sourceTree = "<group>"; };
 		BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
 		BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModal.swift; sourceTree = "<group>"; };
 		BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
 		BF3E98A31D41130700F2C1AF /* InputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
 		BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneResultViewController.swift; sourceTree = "<group>"; };
-		BF3E98A81D464F7900F2C1AF /* BaseTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableController.swift; sourceTree = "<group>"; };
+		BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BF3E98AD1D47A61900F2C1AF /* InventoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryListViewController.swift; sourceTree = "<group>"; };
 		BF3E98B11D47B47600F2C1AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BF3E98B31D48AF7200F2C1AF /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
@@ -171,9 +171,9 @@
 		BF2247371D351A7E0094EE99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFC8DC341D4B35B800DCAF7D /* Cell */,
 				BFC8DC321D4A275200DCAF7D /* Entities */,
 				BFC8DC331D4A278100DCAF7D /* Request */,
-				BF2247581D38EBC30094EE99 /* StoreData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -239,9 +239,9 @@
 		BF2247871D3E252E0094EE99 /* DepartmentScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BF3E98A81D464F7900F2C1AF /* BaseTableController.swift */,
+				BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */,
 				BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */,
-				BF22478B1D3E42300094EE99 /* DetailsDepartmentController.swift */,
+				BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */,
 				BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */,
 			);
 			name = DepartmentScreen;
@@ -306,6 +306,14 @@
 				BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */,
 			);
 			name = Request;
+			sourceTree = "<group>";
+		};
+		BFC8DC341D4B35B800DCAF7D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF2247581D38EBC30094EE99 /* StoreData.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		BFCCB0031D33953900D7BB9E /* LoginScreen */ = {
@@ -612,9 +620,9 @@
 				BF2247861D3E1F970094EE99 /* Constants.swift in Sources */,
 				BF3E98B71D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld in Sources */,
 				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
-				BF22478C1D3E42300094EE99 /* DetailsDepartmentController.swift in Sources */,
+				BF22478C1D3E42300094EE99 /* SeveralResultsViewController.swift in Sources */,
 				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
-				BF3E98A91D464F7900F2C1AF /* BaseTableController.swift in Sources */,
+				BF3E98A91D464F7900F2C1AF /* DetailsViewController.swift in Sources */,
 				BF3E989E1D3F8A0900F2C1AF /* RequestModal.swift in Sources */,
 				BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */,
 			);

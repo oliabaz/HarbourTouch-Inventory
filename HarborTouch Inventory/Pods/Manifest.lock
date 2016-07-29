@@ -1,12 +1,17 @@
 PODS:
   - Alamofire (3.4.1)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - MagicalRecord
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
 
-PODFILE CHECKSUM: eb71ccc189d086f2fd1b30e3c2afa5b597a16ceb
+PODFILE CHECKSUM: 9e95d418ecb5922ae5c47f9c699bbed230b48844
 
 COCOAPODS: 1.0.1

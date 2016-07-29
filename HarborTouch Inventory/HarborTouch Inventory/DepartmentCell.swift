@@ -12,9 +12,9 @@ class DepartmentCell: UITableViewCell {
 
     @IBOutlet weak var resultLabel: UILabel!
 
-    var result: String? {
+    var department: String? {
         didSet {
-            resultLabel.text = result
+            resultLabel.text = department
         }
     }
 }

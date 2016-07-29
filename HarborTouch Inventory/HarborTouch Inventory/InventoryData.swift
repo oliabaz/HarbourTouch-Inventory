@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+import MagicalRecord
 
 class InventoryData: NSManagedObject {
 
@@ -39,5 +39,29 @@ class InventoryData: NSManagedObject {
     @NSManaged var updatedAt: String?
     @NSManaged var usesWeightScale: NSNumber?
     @NSManaged var weighted: NSNumber?
+    
+    func saveInventoryItems(inventory: [String: AnyObject]) {
+
+
+        saveContext()
+    }
+    
+    func fetchInventoryItems() -> [InventoryData] {
+        var inventories: [InventoryData]!
+        inventories = InventoryData.MR_findAll() as! [InventoryData]
+        return inventories
+    }
+    
+    func deleteInventoryItems() {
+        let inventories = fetchInventoryItems()
+        for inventory in inventories {
+            inventory.MR_deleteEntity()
+        }
+        saveContext()
+    }
+    
+    func saveContext() {
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+    }
 
 }

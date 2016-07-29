@@ -24,7 +24,7 @@ class StoreSetupViewController: BaseViewController {
     }
 }
 
-extension StoreSetupViewController: UITableViewDelegate {
+extension StoreSetupViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("storeCell") as! StoreCell
@@ -44,9 +44,6 @@ extension StoreSetupViewController: UITableViewDelegate {
         default: break
         }
     }
-}
-
-extension StoreSetupViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2

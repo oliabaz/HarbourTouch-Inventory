@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import CoreData
 
-class InventoryListViewController: BaseTableController {
+class InventoryListViewController: DetailsViewController {
     
-    var inventory = [InventoryData]()
+    let inventory = InventoryData()
+    var inventories = [InventoryData]()
     
     @IBOutlet var tableView: UITableView!
     
@@ -22,19 +22,23 @@ class InventoryListViewController: BaseTableController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+//        inventories = inventory.fetchInventoryItems()
+//        print(inventories)
+        
     }
 }
 
-extension InventoryListViewController: UITableViewDataSource {
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inventory.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("inventoryCell") as! InventoryCell
-        cell.backgroundView = tableView.setupCellBackground(indexPath)
- 
-        return cell
-    }
-}
+//extension InventoryListViewController: UITableViewDataSource {
+//    
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return inventory.count
+//    }
+
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("inventoryCell") as! InventoryCell
+//        cell.backgroundView = tableView.setupCellBackground(indexPath)
+// 
+//        return cell
+//    }
+//}

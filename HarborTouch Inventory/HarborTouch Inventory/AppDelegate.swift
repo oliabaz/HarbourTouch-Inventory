@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MagicalRecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.setNavBar()
         UISwitch.setupSwitchColor()
-        UIBarButtonItem.appearance()        
+        UIBarButtonItem.appearance()
+        MagicalRecord.setupCoreDataStackWithStoreNamed("InventoryData")
         return true
     }
 

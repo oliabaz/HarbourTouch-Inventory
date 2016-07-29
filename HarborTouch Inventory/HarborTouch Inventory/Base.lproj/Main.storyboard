@@ -501,10 +501,10 @@
             </objects>
             <point key="canvasLocation" x="1580" y="1024"/>
         </scene>
-        <!--Details Department Controller-->
+        <!--Several Results View Controller-->
         <scene sceneID="iPn-Av-IMX">
             <objects>
-                <viewController id="CD4-YM-Gbl" customClass="DetailsDepartmentController" customModule="HarborTouch_Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CD4-YM-Gbl" customClass="SeveralResultsViewController" customModule="HarborTouch_Inventory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Gl-3b-KrA"/>
                         <viewControllerLayoutGuide type="bottom" id="t3z-O1-HNX"/>

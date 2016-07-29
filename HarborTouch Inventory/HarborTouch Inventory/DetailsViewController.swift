@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DetailsDepartmentControllerDelegate: class {
-    func showChoice(choice: String)
+    func showChoosenDepartment(choice: String)
 }
 
 enum ResultSections: Int {
@@ -22,41 +22,38 @@ enum ResultSections: Int {
     }()
 }
 
-class BaseTableController: BaseViewController {
+class DetailsViewController: BaseViewController {
     
-    var result = [String]()
+    var departments = [String]()
     weak var delegate: DetailsDepartmentControllerDelegate?
     
-    func sendChoice(choice: String) {
-        delegate?.showChoice(choice)
+    func sendChoosenDepartment(choice: String) {
+        delegate?.showChoosenDepartment(choice)
         navigationController?.popViewControllerAnimated(true)
     }
 }
 
-extension BaseTableController: UITableViewDataSource {
+extension DetailsViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch ResultSections(rawValue: section)! {
         case .result:
-            return result.count
+            return departments.count
         case .input:
             return 1
         }
     }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
+        cell.backgroundView = tableView.setupCellBackground(indexPath)
+        cell.department = departments[indexPath.row]
+        return cell
+    }
 }
 
-//extension BaseViewController: UITableViewDelegate {
-//    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
-//        cell.backgroundView = tableView.setupCellBackground(indexPath)
-//        return cell
-//    }
-//}
-
-extension BaseTableController: InputCellDelegate {
+extension DetailsViewController: InputCellDelegate {
     
     func inputCellTextEndEditing(text: String) {
-        sendChoice(text)
+        sendChoosenDepartment(text)
     }
 }

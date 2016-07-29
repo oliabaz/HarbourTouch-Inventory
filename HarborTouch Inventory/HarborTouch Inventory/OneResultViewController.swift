@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OneResultViewController: BaseTableController {
+class OneResultViewController: DetailsViewController {
 
     @IBOutlet private weak var lowConstraint: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
@@ -48,7 +48,7 @@ class OneResultViewController: BaseTableController {
     
     func onDoneAction() {
         self.view.endEditing(true)
-        delegate?.showChoice(keyboardTextField.text!)
+        delegate?.showChoosenDepartment(keyboardTextField.text!)
         navigationController?.popViewControllerAnimated(true)
     }
 
@@ -72,17 +72,13 @@ extension OneResultViewController: UITextFieldDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        sendChoice(result[indexPath.row])
+        sendChoosenDepartment(departments[indexPath.row])
     }
 }
 
-extension OneResultViewController: UITableViewDataSource {
+extension OneResultViewController {
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
-        cell.backgroundView = tableView.setupCellBackground(indexPath)
-        cell.result = result[indexPath.row]
-        return cell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
     }
-    
 }

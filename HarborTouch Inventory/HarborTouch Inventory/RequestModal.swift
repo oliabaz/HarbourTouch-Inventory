@@ -28,8 +28,8 @@ class RequestModel {
             guard response.result.isSuccess else {
                 return
             }
-            let values = response.result.value as! [[String: AnyObject]]
-            completionHandler(values)
+            let requestResult = response.result.value as! [[String: AnyObject]]
+            completionHandler(requestResult)
         }
     }
 }

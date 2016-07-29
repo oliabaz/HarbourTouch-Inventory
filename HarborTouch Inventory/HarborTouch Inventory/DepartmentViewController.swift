@@ -41,13 +41,13 @@ class DepartmentViewController: BaseViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "details" {
-            let destinationVC = segue.destinationViewController as! DetailsDepartmentController
-            destinationVC.result = transferResult
+            let destinationVC = segue.destinationViewController as! SeveralResultsViewController
+            destinationVC.departments = transferResult
             destinationVC.delegate = self
         }
         if segue.identifier == "oneResult" {
             let destinationVC = segue.destinationViewController as! OneResultViewController
-            destinationVC.result = transferResult
+            destinationVC.departments = transferResult
             destinationVC.delegate = self
         }
     }
@@ -55,7 +55,7 @@ class DepartmentViewController: BaseViewController {
 
 extension DepartmentViewController: DetailsDepartmentControllerDelegate {
 
-    func showChoice(choice: String) {
+    func showChoosenDepartment(choice: String) {
         resultLabel.text = choice
     }
 }

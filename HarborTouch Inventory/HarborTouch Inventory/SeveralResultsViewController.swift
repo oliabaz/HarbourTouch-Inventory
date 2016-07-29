@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsDepartmentController: BaseTableController {
+class SeveralResultsViewController: DetailsViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var lowConstraint: NSLayoutConstraint!
@@ -30,16 +30,13 @@ class DetailsDepartmentController: BaseTableController {
     }
 }
 
-extension DetailsDepartmentController: UITableViewDataSource {
+extension SeveralResultsViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch ResultSections(rawValue: indexPath.section)! {
         case .result:
-            let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
-            cell.backgroundView = tableView.setupCellBackground(indexPath)
-            cell.result = result[indexPath.row]
-            return cell
-        case .input:
+            return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+         case .input:
             let cell = tableView.dequeueReusableCellWithIdentifier("inputCell") as! InputCell
             cell.delegate = self
             return cell
@@ -51,6 +48,6 @@ extension DetailsDepartmentController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        sendChoice(result[indexPath.row])
+        sendChoosenDepartment(departments[indexPath.row])
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class LoginViewController: BaseViewController {
     
@@ -22,31 +21,15 @@ class LoginViewController: BaseViewController {
     
     @IBAction func onLoginAction(sender: AnyObject) {
         RequestModel.requestInventory(){ (requestResult) -> Void in
-//            var items: [NSManagedObject]
-//            var managedContext: NSManagedObjectContext
-//
-//            (items, managedContext) = self.receiveItemsFromDataBase()
-//            for item in items {
-//                managedContext.deleteObject(item)
-//                AppDelegate().saveContext()
-//            }
+            
+//            var inventoryData = InventoryData()
 //            for item in requestResult {
-//                let entity = NSEntityDescription.entityForName("Inventory", inManagedObjectContext: managedContext)
-//                let inventory = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-//                for (key, value) in item {
-//                    if value is String || value is NSNumber {
-//                        inventory.setValue(value, forKey: key)
-//                    } else {
-//                        inventory.setValue(nil, forKey: key)
-//                    }
-//                    do {
-//                        try managedContext.save()
-//                        items.append(inventory)
-//                    } catch let error as NSError {
-//                        print("Could not save \(error)")
-//                    }
+//                for (_, value) in item {
+//                    inventoryData = InventoryData.MR_createEntity()! as InventoryData
+//                    inventoryData.itemName = value as? String
 //                }
 //            }
+         
             self.performSegueWithIdentifier("login", sender: self)
         }
     }
