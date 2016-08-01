@@ -24,7 +24,7 @@
 		BF2247891D3E256E0094EE99 /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */; };
 		BF22478C1D3E42300094EE99 /* SeveralResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */; };
 		BF22478E1D3E44A00094EE99 /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */; };
-		BF3E989E1D3F8A0900F2C1AF /* RequestModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */; };
+		BF3E989E1D3F8A0900F2C1AF /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E989D1D3F8A0800F2C1AF /* RequestModel.swift */; };
 		BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */; };
 		BF3E98A41D41130700F2C1AF /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A31D41130700F2C1AF /* InputCell.swift */; };
 		BF3E98A71D45E36D00F2C1AF /* OneResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */; };
@@ -37,7 +37,8 @@
 		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
 		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
 		BFA98C121D2D481100F0E9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */; };
-		BFC8DC311D49EB3F00DCAF7D /* InventoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8DC2F1D49EB3F00DCAF7D /* InventoryData.swift */; };
+		BFC8DC311D49EB3F00DCAF7D /* InventoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8DC2F1D49EB3F00DCAF7D /* InventoryEntity.swift */; };
+		BFC8DC3E1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8DC3D1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift */; };
 		BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF029771D2FB7A600961EC7 /* LoginViewController.swift */; };
 		D72ABB1E8C696197F938B281 /* Pods_HarborTouch_InventoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEDFE7EDD96C6F5E8D93613 /* Pods_HarborTouch_InventoryTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,7 +81,7 @@
 		BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
 		BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeveralResultsViewController.swift; sourceTree = "<group>"; };
 		BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
-		BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModal.swift; sourceTree = "<group>"; };
+		BF3E989D1D3F8A0800F2C1AF /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
 		BF3E98A31D41130700F2C1AF /* InputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
 		BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneResultViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +99,8 @@
 		BFA98C181D2D481100F0E9FA /* HarborTouch InventoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C231D2D481100F0E9FA /* HarborTouch InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC8DBCB1D48CE4B00DCAF7D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/HarborTouch_Inventory-gllhtxfcebunxfbhsqeenqupmhua/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		BFC8DC2F1D49EB3F00DCAF7D /* InventoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryData.swift; sourceTree = "<group>"; };
+		BFC8DC2F1D49EB3F00DCAF7D /* InventoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryEntity.swift; sourceTree = "<group>"; };
+		BFC8DC3D1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailsViewController.swift; sourceTree = "<group>"; };
 		BFF029771D2FB7A600961EC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CDEDFE7EDD96C6F5E8D93613 /* Pods_HarborTouch_InventoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarborTouch_InventoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CFCB64551B85EA93B08156 /* Pods-HarborTouch InventoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch InventoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch InventoryUITests/Pods-HarborTouch InventoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,8 +241,8 @@
 		BF2247871D3E252E0094EE99 /* DepartmentScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */,
 				BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */,
+				BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */,
 				BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */,
 				BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */,
 			);
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				BF3E98AD1D47A61900F2C1AF /* InventoryListViewController.swift */,
+				BFC8DC3D1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift */,
 			);
 			name = InventoryListScreen;
 			sourceTree = "<group>";
@@ -295,7 +298,7 @@
 		BFC8DC321D4A275200DCAF7D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BFC8DC2F1D49EB3F00DCAF7D /* InventoryData.swift */,
+				BFC8DC2F1D49EB3F00DCAF7D /* InventoryEntity.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -303,7 +306,7 @@
 		BFC8DC331D4A278100DCAF7D /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				BF3E989D1D3F8A0800F2C1AF /* RequestModal.swift */,
+				BF3E989D1D3F8A0800F2C1AF /* RequestModel.swift */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -613,17 +616,18 @@
 				BF2247651D3CD6B40094EE99 /* UISwitchStyle.swift in Sources */,
 				BF2247671D3CEFEB0094EE99 /* UITableViewStyle.swift in Sources */,
 				BF3E98A41D41130700F2C1AF /* InputCell.swift in Sources */,
-				BFC8DC311D49EB3F00DCAF7D /* InventoryData.swift in Sources */,
+				BFC8DC311D49EB3F00DCAF7D /* InventoryEntity.swift in Sources */,
 				BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */,
 				BF22478E1D3E44A00094EE99 /* ChoiceButton.swift in Sources */,
 				BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */,
 				BF2247861D3E1F970094EE99 /* Constants.swift in Sources */,
+				BFC8DC3E1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift in Sources */,
 				BF3E98B71D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld in Sources */,
 				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
 				BF22478C1D3E42300094EE99 /* SeveralResultsViewController.swift in Sources */,
 				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
 				BF3E98A91D464F7900F2C1AF /* DetailsViewController.swift in Sources */,
-				BF3E989E1D3F8A0900F2C1AF /* RequestModal.swift in Sources */,
+				BF3E989E1D3F8A0900F2C1AF /* RequestModel.swift in Sources */,
 				BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

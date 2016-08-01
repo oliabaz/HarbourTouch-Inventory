@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpe-cs-y7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="412"/>
+            <point key="canvasLocation" x="1580" y="332"/>
         </scene>
         <!--Inventory List View Controller-->
         <scene sceneID="pY1-wb-lmt">
@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ry-vq-PYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="412"/>
+            <point key="canvasLocation" x="2152" y="148"/>
         </scene>
         <!--Store Setup View Controller-->
         <scene sceneID="Mdf-3Z-VTG">
@@ -625,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnn-nR-sYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550" y="1259"/>
+            <point key="canvasLocation" x="2550" y="1319"/>
         </scene>
         <!--One Result View Controller-->
         <scene sceneID="rej-ou-IqQ">

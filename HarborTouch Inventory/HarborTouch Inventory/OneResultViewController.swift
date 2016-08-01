@@ -45,7 +45,7 @@ class OneResultViewController: DetailsViewController {
         navigationItem.rightBarButtonItem = addButton
     }
 
-    
+    // MARK: - Actions
     func onDoneAction() {
         self.view.endEditing(true)
         delegate?.showChoosenDepartment(keyboardTextField.text!)
@@ -62,23 +62,22 @@ class OneResultViewController: DetailsViewController {
             setupNavigationBarButton(.Reply)
         }
     }
+    
+    // MARK: - Override
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        sendChoosenDepartment(departments[indexPath.row])
+    }
 }
 
+// MARK: - UITextFieldDelegate
 extension OneResultViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         onDoneAction()
         return true
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        sendChoosenDepartment(departments[indexPath.row])
-    }
-}
-
-extension OneResultViewController {
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DetailsDepartmentControllerDelegate: class {
+protocol DetailsControllerDelegate: class {
     func showChoosenDepartment(choice: String)
 }
 
@@ -25,7 +25,7 @@ enum ResultSections: Int {
 class DetailsViewController: BaseViewController {
     
     var departments = [String]()
-    weak var delegate: DetailsDepartmentControllerDelegate?
+    weak var delegate: DetailsControllerDelegate?
     
     func sendChoosenDepartment(choice: String) {
         delegate?.showChoosenDepartment(choice)
@@ -33,6 +33,7 @@ class DetailsViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension DetailsViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,11 +44,24 @@ extension DetailsViewController: UITableViewDataSource {
             return 1
         }
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("departmentCell") as! DepartmentCell
         cell.backgroundView = tableView.setupCellBackground(indexPath)
         cell.department = departments[indexPath.row]
         return cell
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension DetailsViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 }
 

@@ -28,26 +28,25 @@ class SeveralResultsViewController: DetailsViewController {
             tableView.frame.size.height = tableView.frame.height + (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
         }
     }
-}
-
-extension SeveralResultsViewController {
     
+    // MARK: - Override
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch ResultSections(rawValue: indexPath.section)! {
         case .result:
             return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
-         case .input:
+        case .input:
             let cell = tableView.dequeueReusableCellWithIdentifier("inputCell") as! InputCell
             cell.delegate = self
             return cell
         }
     }
-
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return ResultSections.resultSectionsCount
-    }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         sendChoosenDepartment(departments[indexPath.row])
     }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return ResultSections.resultSectionsCount
+    }
 }
+

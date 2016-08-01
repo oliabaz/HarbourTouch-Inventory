@@ -10,7 +10,7 @@ import UIKit
 
 extension UINavigationBar {
     
-    static func setNavBar() {
+    static func applyDefaultSlyle() {
         appearance().setBackgroundImage(UIImage(named: "navBar"), forBarMetrics: .Default)
         appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName: (UIFont(name: "HelveticaNeue-Bold", size: 17))!]
         

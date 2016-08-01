@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-    
+
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var highConstraint: NSLayoutConstraint!
     @IBOutlet weak var lowConstraint: NSLayoutConstraint!
@@ -21,15 +21,10 @@ class LoginViewController: BaseViewController {
     
     @IBAction func onLoginAction(sender: AnyObject) {
         RequestModel.requestInventory(){ (requestResult) -> Void in
-            
-//            var inventoryData = InventoryData()
+//            InventoryData.deleteInventoryItems()
 //            for item in requestResult {
-//                for (_, value) in item {
-//                    inventoryData = InventoryData.MR_createEntity()! as InventoryData
-//                    inventoryData.itemName = value as? String
-//                }
+//                InventoryData.saveInventoryItems(item)
 //            }
-         
             self.performSegueWithIdentifier("login", sender: self)
         }
     }
