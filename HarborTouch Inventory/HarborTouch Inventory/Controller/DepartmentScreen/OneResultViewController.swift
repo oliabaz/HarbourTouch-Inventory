@@ -73,7 +73,7 @@ class OneResultViewController: DetailsViewController {
     }
 }
 
-// MARK: - UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
 extension OneResultViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {

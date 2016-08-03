@@ -13,11 +13,10 @@ class InventoryCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
-    var inventory: InventoryData! {
+    var inventory: InventoryEntity! {
         didSet {
             titleLabel.text = inventory.valueForKey("itemName") as? String
             descriptionLabel.text = inventory.valueForKey("itemShortName") as? String
         }
     }
-
 }

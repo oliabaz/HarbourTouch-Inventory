@@ -7,40 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E5EEA20C1A6448011E81E17 /* Pods_HarborTouch_InventoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44FF8186C506F98D0D523CF /* Pods_HarborTouch_InventoryUITests.framework */; };
 		251C17EF9D9BD09A98C56E53 /* Pods_HarborTouch_Inventory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775D6A8CB628093EABC43DB9 /* Pods_HarborTouch_Inventory.framework */; };
-		BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22472F1D350B740094EE99 /* MenuViewController.swift */; };
-		BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */; };
-		BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */; };
-		BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247411D3678FE0094EE99 /* BaseViewController.swift */; };
-		BF22474B1D3779480094EE99 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474A1D3779480094EE99 /* LogoutButton.swift */; };
-		BF22474D1D377FE20094EE99 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474C1D377FE20094EE99 /* BackButton.swift */; };
-		BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22474E1D3782CF0094EE99 /* QuestionButton.swift */; };
-		BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247581D38EBC30094EE99 /* StoreData.swift */; };
-		BF22475F1D39391B0094EE99 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22475D1D39354D0094EE99 /* StoreCell.swift */; };
-		BF2247651D3CD6B40094EE99 /* UISwitchStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247641D3CD6B40094EE99 /* UISwitchStyle.swift */; };
-		BF2247671D3CEFEB0094EE99 /* UITableViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */; };
-		BF2247861D3E1F970094EE99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247851D3E1F970094EE99 /* Constants.swift */; };
-		BF2247891D3E256E0094EE99 /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */; };
-		BF22478C1D3E42300094EE99 /* SeveralResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */; };
-		BF22478E1D3E44A00094EE99 /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */; };
-		BF3E989E1D3F8A0900F2C1AF /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E989D1D3F8A0800F2C1AF /* RequestModel.swift */; };
-		BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */; };
-		BF3E98A41D41130700F2C1AF /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A31D41130700F2C1AF /* InputCell.swift */; };
-		BF3E98A71D45E36D00F2C1AF /* OneResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */; };
-		BF3E98A91D464F7900F2C1AF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */; };
-		BF3E98AE1D47A61900F2C1AF /* InventoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98AD1D47A61900F2C1AF /* InventoryListViewController.swift */; };
-		BF3E98B41D48AF7200F2C1AF /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98B31D48AF7200F2C1AF /* InventoryCell.swift */; };
-		BF3E98B71D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF3E98B51D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld */; };
 		BF3E98BC1D48CABE00F2C1AF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3E98B11D47B47600F2C1AF /* CoreData.framework */; };
-		BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA98C071D2D481100F0E9FA /* AppDelegate.swift */; };
-		BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0B1D2D481100F0E9FA /* Main.storyboard */; };
-		BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */; };
-		BFA98C121D2D481100F0E9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */; };
-		BFC8DC311D49EB3F00DCAF7D /* InventoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8DC2F1D49EB3F00DCAF7D /* InventoryEntity.swift */; };
-		BFC8DC3E1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8DC3D1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift */; };
-		BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF029771D2FB7A600961EC7 /* LoginViewController.swift */; };
-		D72ABB1E8C696197F938B281 /* Pods_HarborTouch_InventoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEDFE7EDD96C6F5E8D93613 /* Pods_HarborTouch_InventoryTests.framework */; };
+		BF5A01391D4F659200A990C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A010A1D4F659200A990C8 /* AppDelegate.swift */; };
+		BF5A01441D4F659200A990C8 /* InventoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01181D4F659200A990C8 /* InventoryEntity.swift */; };
+		BF5A01451D4F659200A990C8 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A011A1D4F659200A990C8 /* RequestModel.swift */; };
+		BF5A01461D4F659200A990C8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A011C1D4F659200A990C8 /* CoreDataManager.swift */; };
+		BF5A01471D4F659200A990C8 /* InventoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A011D1D4F659200A990C8 /* InventoryData.swift */; };
+		BF5A01481D4F659200A990C8 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A011E1D4F659200A990C8 /* StoreData.swift */; };
+		BF5A01491D4F659200A990C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5A01201D4F659200A990C8 /* Assets.xcassets */; };
+		BF5A014A1D4F659200A990C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5A01211D4F659200A990C8 /* LaunchScreen.storyboard */; };
+		BF5A014B1D4F659200A990C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5A01231D4F659200A990C8 /* Main.storyboard */; };
+		BF5A014C1D4F659200A990C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01261D4F659200A990C8 /* Constants.swift */; };
+		BF5A014D1D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01271D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodeld */; };
+		BF5A014F1D4F659200A990C8 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A012C1D4F659200A990C8 /* BackButton.swift */; };
+		BF5A01501D4F659200A990C8 /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A012D1D4F659200A990C8 /* ChoiceButton.swift */; };
+		BF5A01511D4F659200A990C8 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A012E1D4F659200A990C8 /* LogoutButton.swift */; };
+		BF5A01521D4F659200A990C8 /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A012F1D4F659200A990C8 /* QuestionButton.swift */; };
+		BF5A01531D4F659200A990C8 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01311D4F659200A990C8 /* DepartmentCell.swift */; };
+		BF5A01541D4F659200A990C8 /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01321D4F659200A990C8 /* InputCell.swift */; };
+		BF5A01551D4F659200A990C8 /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01331D4F659200A990C8 /* InventoryCell.swift */; };
+		BF5A01561D4F659200A990C8 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01341D4F659200A990C8 /* StoreCell.swift */; };
+		BF5A01571D4F659200A990C8 /* UINavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01361D4F659200A990C8 /* UINavigationBarStyle.swift */; };
+		BF5A01581D4F659200A990C8 /* UISwitchStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01371D4F659200A990C8 /* UISwitchStyle.swift */; };
+		BF5A01591D4F659200A990C8 /* UITableViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01381D4F659200A990C8 /* UITableViewStyle.swift */; };
+		BF5A01711D4F701700A990C8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01621D4F701700A990C8 /* BaseViewController.swift */; };
+		BF5A01721D4F701700A990C8 /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01641D4F701700A990C8 /* DepartmentViewController.swift */; };
+		BF5A01731D4F701700A990C8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01651D4F701700A990C8 /* DetailsViewController.swift */; };
+		BF5A01741D4F701700A990C8 /* OneResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01661D4F701700A990C8 /* OneResultViewController.swift */; };
+		BF5A01751D4F701700A990C8 /* SeveralResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01671D4F701700A990C8 /* SeveralResultsViewController.swift */; };
+		BF5A01761D4F701700A990C8 /* InventoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01691D4F701700A990C8 /* InventoryDetailsViewController.swift */; };
+		BF5A01771D4F701700A990C8 /* InventoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A016A1D4F701700A990C8 /* InventoryListViewController.swift */; };
+		BF5A01781D4F701700A990C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A016C1D4F701700A990C8 /* LoginViewController.swift */; };
+		BF5A01791D4F701700A990C8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A016E1D4F701700A990C8 /* MenuViewController.swift */; };
+		BF5A017A1D4F701700A990C8 /* StoreSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A01701D4F701700A990C8 /* StoreSetupViewController.swift */; };
+		BF5A017C1D50C99400A990C8 /* InventoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A017B1D50C99400A990C8 /* InventoryDetailsCell.swift */; };
+		BFF8B9F21D51D55500827EF1 /* SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8B9F11D51D55500827EF1 /* SourceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,45 +68,47 @@
 		69B47F0808133FAA0F4BF12C /* Pods-HarborTouch Inventory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch Inventory.release.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch Inventory/Pods-HarborTouch Inventory.release.xcconfig"; sourceTree = "<group>"; };
 		775D6A8CB628093EABC43DB9 /* Pods_HarborTouch_Inventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarborTouch_Inventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84BA683A850B86EB6409E11 /* Pods-HarborTouch InventoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch InventoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch InventoryUITests/Pods-HarborTouch InventoryUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BF22472F1D350B740094EE99 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarStyle.swift; sourceTree = "<group>"; };
-		BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupViewController.swift; sourceTree = "<group>"; };
-		BF2247411D3678FE0094EE99 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		BF22474A1D3779480094EE99 /* LogoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
-		BF22474C1D377FE20094EE99 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		BF22474E1D3782CF0094EE99 /* QuestionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
-		BF2247581D38EBC30094EE99 /* StoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
-		BF22475D1D39354D0094EE99 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
-		BF2247641D3CD6B40094EE99 /* UISwitchStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchStyle.swift; sourceTree = "<group>"; };
-		BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewStyle.swift; sourceTree = "<group>"; };
-		BF2247851D3E1F970094EE99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
-		BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeveralResultsViewController.swift; sourceTree = "<group>"; };
-		BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
-		BF3E989D1D3F8A0800F2C1AF /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
-		BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
-		BF3E98A31D41130700F2C1AF /* InputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
-		BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneResultViewController.swift; sourceTree = "<group>"; };
-		BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		BF3E98AD1D47A61900F2C1AF /* InventoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryListViewController.swift; sourceTree = "<group>"; };
 		BF3E98B11D47B47600F2C1AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		BF3E98B31D48AF7200F2C1AF /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
-		BF3E98B61D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HarbourTouch Inventory.xcdatamodel"; sourceTree = "<group>"; };
+		BF5A010A1D4F659200A990C8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF5A01181D4F659200A990C8 /* InventoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryEntity.swift; sourceTree = "<group>"; };
+		BF5A011A1D4F659200A990C8 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		BF5A011C1D4F659200A990C8 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BF5A011D1D4F659200A990C8 /* InventoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryData.swift; sourceTree = "<group>"; };
+		BF5A011E1D4F659200A990C8 /* StoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
+		BF5A01201D4F659200A990C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF5A01221D4F659200A990C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF5A01241D4F659200A990C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF5A01261D4F659200A990C8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF5A01281D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HarbourTouch Inventory.xcdatamodel"; sourceTree = "<group>"; };
+		BF5A01291D4F659200A990C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5A012C1D4F659200A990C8 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		BF5A012D1D4F659200A990C8 /* ChoiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
+		BF5A012E1D4F659200A990C8 /* LogoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
+		BF5A012F1D4F659200A990C8 /* QuestionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
+		BF5A01311D4F659200A990C8 /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
+		BF5A01321D4F659200A990C8 /* InputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
+		BF5A01331D4F659200A990C8 /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
+		BF5A01341D4F659200A990C8 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		BF5A01361D4F659200A990C8 /* UINavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarStyle.swift; sourceTree = "<group>"; };
+		BF5A01371D4F659200A990C8 /* UISwitchStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchStyle.swift; sourceTree = "<group>"; };
+		BF5A01381D4F659200A990C8 /* UITableViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewStyle.swift; sourceTree = "<group>"; };
+		BF5A01621D4F701700A990C8 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BF5A01641D4F701700A990C8 /* DepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
+		BF5A01651D4F701700A990C8 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BF5A01661D4F701700A990C8 /* OneResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneResultViewController.swift; sourceTree = "<group>"; };
+		BF5A01671D4F701700A990C8 /* SeveralResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeveralResultsViewController.swift; sourceTree = "<group>"; };
+		BF5A01691D4F701700A990C8 /* InventoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailsViewController.swift; sourceTree = "<group>"; };
+		BF5A016A1D4F701700A990C8 /* InventoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryListViewController.swift; sourceTree = "<group>"; };
+		BF5A016C1D4F701700A990C8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF5A016E1D4F701700A990C8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BF5A01701D4F701700A990C8 /* StoreSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupViewController.swift; sourceTree = "<group>"; };
+		BF5A017B1D50C99400A990C8 /* InventoryDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailsCell.swift; sourceTree = "<group>"; };
 		BFA98C041D2D481100F0E9FA /* HarborTouch Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HarborTouch Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFA98C071D2D481100F0E9FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFA98C0C1D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BFA98C111D2D481100F0E9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BFA98C131D2D481100F0E9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA98C181D2D481100F0E9FA /* HarborTouch InventoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA98C231D2D481100F0E9FA /* HarborTouch InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HarborTouch InventoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC8DBCB1D48CE4B00DCAF7D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/HarborTouch_Inventory-gllhtxfcebunxfbhsqeenqupmhua/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		BFC8DC2F1D49EB3F00DCAF7D /* InventoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryEntity.swift; sourceTree = "<group>"; };
-		BFC8DC3D1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailsViewController.swift; sourceTree = "<group>"; };
-		BFF029771D2FB7A600961EC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CDEDFE7EDD96C6F5E8D93613 /* Pods_HarborTouch_InventoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarborTouch_InventoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF8B9F11D51D55500827EF1 /* SourceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceData.swift; sourceTree = "<group>"; };
 		E3CFCB64551B85EA93B08156 /* Pods-HarborTouch InventoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch InventoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch InventoryUITests/Pods-HarborTouch InventoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E44FF8186C506F98D0D523CF /* Pods_HarborTouch_InventoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarborTouch_InventoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA1D1D67EB4EBFF618E18C0 /* Pods-HarborTouch Inventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch Inventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch Inventory/Pods-HarborTouch Inventory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D72ABB1E8C696197F938B281 /* Pods_HarborTouch_InventoryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5EEA20C1A6448011E81E17 /* Pods_HarborTouch_InventoryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,106 +158,182 @@
 				BFC8DBCB1D48CE4B00DCAF7D /* Alamofire.framework */,
 				BF3E98B11D47B47600F2C1AF /* CoreData.framework */,
 				775D6A8CB628093EABC43DB9 /* Pods_HarborTouch_Inventory.framework */,
-				CDEDFE7EDD96C6F5E8D93613 /* Pods_HarborTouch_InventoryTests.framework */,
-				E44FF8186C506F98D0D523CF /* Pods_HarborTouch_InventoryUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF22472E1D350B600094EE99 /* MenuScreen */ = {
+		BF5A01091D4F659200A990C8 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				BF22472F1D350B740094EE99 /* MenuViewController.swift */,
+				BF5A010A1D4F659200A990C8 /* AppDelegate.swift */,
 			);
-			name = MenuScreen;
+			path = Class;
 			sourceTree = "<group>";
 		};
-		BF2247371D351A7E0094EE99 /* Model */ = {
+		BF5A01161D4F659200A990C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFC8DC341D4B35B800DCAF7D /* Cell */,
-				BFC8DC321D4A275200DCAF7D /* Entities */,
-				BFC8DC331D4A278100DCAF7D /* Request */,
+				BF5A01171D4F659200A990C8 /* Entity */,
+				BF5A01191D4F659200A990C8 /* Request */,
+				BF5A011B1D4F659200A990C8 /* SourceData */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		BF2247381D351A860094EE99 /* Extension */ = {
+		BF5A01171D4F659200A990C8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BF2247391D351BC50094EE99 /* UINavigationBarStyle.swift */,
-				BF2247641D3CD6B40094EE99 /* UISwitchStyle.swift */,
-				BF2247661D3CEFEB0094EE99 /* UITableViewStyle.swift */,
+				BF5A01181D4F659200A990C8 /* InventoryEntity.swift */,
 			);
-			name = Extension;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		BF22473B1D3652240094EE99 /* StoreSetupScreen */ = {
+		BF5A01191D4F659200A990C8 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				BF22473C1D36524C0094EE99 /* StoreSetupViewController.swift */,
+				BF5A011A1D4F659200A990C8 /* RequestModel.swift */,
 			);
-			name = StoreSetupScreen;
+			path = Request;
 			sourceTree = "<group>";
 		};
-		BF2247401D3678D20094EE99 /* Base */ = {
+		BF5A011B1D4F659200A990C8 /* SourceData */ = {
 			isa = PBXGroup;
 			children = (
-				BF2247411D3678FE0094EE99 /* BaseViewController.swift */,
+				BF5A011C1D4F659200A990C8 /* CoreDataManager.swift */,
+				BF5A011D1D4F659200A990C8 /* InventoryData.swift */,
+				BFF8B9F11D51D55500827EF1 /* SourceData.swift */,
+				BF5A011E1D4F659200A990C8 /* StoreData.swift */,
 			);
-			name = Base;
+			path = SourceData;
 			sourceTree = "<group>";
 		};
-		BF2247431D3679260094EE99 /* View */ = {
+		BF5A011F1D4F659200A990C8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BF2247381D351A860094EE99 /* Extension */,
-				BF2247451D36929E0094EE99 /* Button */,
-				BF2247441D3692720094EE99 /* Cell */,
+				BF5A01201D4F659200A990C8 /* Assets.xcassets */,
+				BF5A01211D4F659200A990C8 /* LaunchScreen.storyboard */,
+				BF5A01231D4F659200A990C8 /* Main.storyboard */,
 			);
-			name = View;
+			path = Resource;
 			sourceTree = "<group>";
 		};
-		BF2247441D3692720094EE99 /* Cell */ = {
+		BF5A01251D4F659200A990C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF22475D1D39354D0094EE99 /* StoreCell.swift */,
-				BF3E98A11D3FB71F00F2C1AF /* DepartmentCell.swift */,
-				BF3E98A31D41130700F2C1AF /* InputCell.swift */,
-				BF3E98B31D48AF7200F2C1AF /* InventoryCell.swift */,
+				BF5A01291D4F659200A990C8 /* Info.plist */,
+				BF5A01261D4F659200A990C8 /* Constants.swift */,
+				BF5A01271D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodeld */,
 			);
-			name = Cell;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BF2247451D36929E0094EE99 /* Button */ = {
+		BF5A012A1D4F659200A990C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF22474A1D3779480094EE99 /* LogoutButton.swift */,
-				BF22474C1D377FE20094EE99 /* BackButton.swift */,
-				BF22474E1D3782CF0094EE99 /* QuestionButton.swift */,
-				BF22478D1D3E44A00094EE99 /* ChoiceButton.swift */,
+				BF5A012B1D4F659200A990C8 /* Button */,
+				BF5A01301D4F659200A990C8 /* Cell */,
+				BF5A01351D4F659200A990C8 /* Extension */,
 			);
-			name = Button;
+			path = View;
 			sourceTree = "<group>";
 		};
-		BF2247871D3E252E0094EE99 /* DepartmentScreen */ = {
+		BF5A012B1D4F659200A990C8 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				BF2247881D3E256E0094EE99 /* DepartmentViewController.swift */,
-				BF3E98A81D464F7900F2C1AF /* DetailsViewController.swift */,
-				BF22478B1D3E42300094EE99 /* SeveralResultsViewController.swift */,
-				BF3E98A61D45E36D00F2C1AF /* OneResultViewController.swift */,
+				BF5A012C1D4F659200A990C8 /* BackButton.swift */,
+				BF5A012D1D4F659200A990C8 /* ChoiceButton.swift */,
+				BF5A012E1D4F659200A990C8 /* LogoutButton.swift */,
+				BF5A012F1D4F659200A990C8 /* QuestionButton.swift */,
 			);
-			name = DepartmentScreen;
+			path = Button;
 			sourceTree = "<group>";
 		};
-		BF3E98AC1D47A5F300F2C1AF /* InventoryListScreen */ = {
+		BF5A01301D4F659200A990C8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BF3E98AD1D47A61900F2C1AF /* InventoryListViewController.swift */,
-				BFC8DC3D1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift */,
+				BF5A01311D4F659200A990C8 /* DepartmentCell.swift */,
+				BF5A01321D4F659200A990C8 /* InputCell.swift */,
+				BF5A01331D4F659200A990C8 /* InventoryCell.swift */,
+				BF5A01341D4F659200A990C8 /* StoreCell.swift */,
+				BF5A017B1D50C99400A990C8 /* InventoryDetailsCell.swift */,
 			);
-			name = InventoryListScreen;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BF5A01351D4F659200A990C8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A01361D4F659200A990C8 /* UINavigationBarStyle.swift */,
+				BF5A01371D4F659200A990C8 /* UISwitchStyle.swift */,
+				BF5A01381D4F659200A990C8 /* UITableViewStyle.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF5A01601D4F701700A990C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A01611D4F701700A990C8 /* BaseController */,
+				BF5A01631D4F701700A990C8 /* DepartmentScreen */,
+				BF5A01681D4F701700A990C8 /* InventoryListScreen */,
+				BF5A016B1D4F701700A990C8 /* LoginScreen */,
+				BF5A016D1D4F701700A990C8 /* MenuScreen */,
+				BF5A016F1D4F701700A990C8 /* StoreSetupScreen */,
+			);
+			name = Controller;
+			path = "HarborTouch Inventory/Controller";
+			sourceTree = SOURCE_ROOT;
+		};
+		BF5A01611D4F701700A990C8 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A01621D4F701700A990C8 /* BaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		BF5A01631D4F701700A990C8 /* DepartmentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A01641D4F701700A990C8 /* DepartmentViewController.swift */,
+				BF5A01651D4F701700A990C8 /* DetailsViewController.swift */,
+				BF5A01661D4F701700A990C8 /* OneResultViewController.swift */,
+				BF5A01671D4F701700A990C8 /* SeveralResultsViewController.swift */,
+			);
+			path = DepartmentScreen;
+			sourceTree = "<group>";
+		};
+		BF5A01681D4F701700A990C8 /* InventoryListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A01691D4F701700A990C8 /* InventoryDetailsViewController.swift */,
+				BF5A016A1D4F701700A990C8 /* InventoryListViewController.swift */,
+			);
+			path = InventoryListScreen;
+			sourceTree = "<group>";
+		};
+		BF5A016B1D4F701700A990C8 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A016C1D4F701700A990C8 /* LoginViewController.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		BF5A016D1D4F701700A990C8 /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A016E1D4F701700A990C8 /* MenuViewController.swift */,
+			);
+			path = MenuScreen;
+			sourceTree = "<group>";
+		};
+		BF5A016F1D4F701700A990C8 /* StoreSetupScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF5A01701D4F701700A990C8 /* StoreSetupViewController.swift */,
+			);
+			path = StoreSetupScreen;
 			sourceTree = "<group>";
 		};
 		BFA98BFB1D2D481100F0E9FA = {
@@ -281,63 +359,14 @@
 		BFA98C061D2D481100F0E9FA /* HarborTouch Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				BF2247431D3679260094EE99 /* View */,
-				BF2247371D351A7E0094EE99 /* Model */,
-				BFCCB0081D33B78F00D7BB9E /* Controller */,
-				BFA98C071D2D481100F0E9FA /* AppDelegate.swift */,
-				BF2247851D3E1F970094EE99 /* Constants.swift */,
-				BFA98C0B1D2D481100F0E9FA /* Main.storyboard */,
-				BFA98C0E1D2D481100F0E9FA /* Assets.xcassets */,
-				BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */,
-				BF3E98B51D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld */,
-				BFA98C131D2D481100F0E9FA /* Info.plist */,
+				BF5A01091D4F659200A990C8 /* Class */,
+				BF5A01161D4F659200A990C8 /* Model */,
+				BF5A012A1D4F659200A990C8 /* View */,
+				BF5A01601D4F701700A990C8 /* Controller */,
+				BF5A011F1D4F659200A990C8 /* Resource */,
+				BF5A01251D4F659200A990C8 /* Supporting Files */,
 			);
 			path = "HarborTouch Inventory";
-			sourceTree = "<group>";
-		};
-		BFC8DC321D4A275200DCAF7D /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BFC8DC2F1D49EB3F00DCAF7D /* InventoryEntity.swift */,
-			);
-			name = Entities;
-			sourceTree = "<group>";
-		};
-		BFC8DC331D4A278100DCAF7D /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				BF3E989D1D3F8A0800F2C1AF /* RequestModel.swift */,
-			);
-			name = Request;
-			sourceTree = "<group>";
-		};
-		BFC8DC341D4B35B800DCAF7D /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				BF2247581D38EBC30094EE99 /* StoreData.swift */,
-			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
-		BFCCB0031D33953900D7BB9E /* LoginScreen */ = {
-			isa = PBXGroup;
-			children = (
-				BFF029771D2FB7A600961EC7 /* LoginViewController.swift */,
-			);
-			name = LoginScreen;
-			sourceTree = "<group>";
-		};
-		BFCCB0081D33B78F00D7BB9E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BF3E98AC1D47A5F300F2C1AF /* InventoryListScreen */,
-				BF2247871D3E252E0094EE99 /* DepartmentScreen */,
-				BF2247401D3678D20094EE99 /* Base */,
-				BF22473B1D3652240094EE99 /* StoreSetupScreen */,
-				BF22472E1D350B600094EE99 /* MenuScreen */,
-				BFCCB0031D33953900D7BB9E /* LoginScreen */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,9 +481,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA98C121D2D481100F0E9FA /* LaunchScreen.storyboard in Resources */,
-				BFA98C0F1D2D481100F0E9FA /* Assets.xcassets in Resources */,
-				BFA98C0D1D2D481100F0E9FA /* Main.storyboard in Resources */,
+				BF5A01491D4F659200A990C8 /* Assets.xcassets in Resources */,
+				BF5A014B1D4F659200A990C8 /* Main.storyboard in Resources */,
+				BF5A014A1D4F659200A990C8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,33 +631,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2247891D3E256E0094EE99 /* DepartmentViewController.swift in Sources */,
-				BF22475F1D39391B0094EE99 /* StoreCell.swift in Sources */,
-				BFF029781D2FB7A600961EC7 /* LoginViewController.swift in Sources */,
-				BF3E98B41D48AF7200F2C1AF /* InventoryCell.swift in Sources */,
-				BF22473A1D351BC50094EE99 /* UINavigationBarStyle.swift in Sources */,
-				BF2247301D350B740094EE99 /* MenuViewController.swift in Sources */,
-				BF3E98AE1D47A61900F2C1AF /* InventoryListViewController.swift in Sources */,
-				BF3E98A71D45E36D00F2C1AF /* OneResultViewController.swift in Sources */,
-				BF22474B1D3779480094EE99 /* LogoutButton.swift in Sources */,
-				BF22474F1D3782CF0094EE99 /* QuestionButton.swift in Sources */,
-				BF22474D1D377FE20094EE99 /* BackButton.swift in Sources */,
-				BF2247651D3CD6B40094EE99 /* UISwitchStyle.swift in Sources */,
-				BF2247671D3CEFEB0094EE99 /* UITableViewStyle.swift in Sources */,
-				BF3E98A41D41130700F2C1AF /* InputCell.swift in Sources */,
-				BFC8DC311D49EB3F00DCAF7D /* InventoryEntity.swift in Sources */,
-				BF22473D1D36524C0094EE99 /* StoreSetupViewController.swift in Sources */,
-				BF22478E1D3E44A00094EE99 /* ChoiceButton.swift in Sources */,
-				BF2247591D38EBC30094EE99 /* StoreData.swift in Sources */,
-				BF2247861D3E1F970094EE99 /* Constants.swift in Sources */,
-				BFC8DC3E1D4F4E1A00DCAF7D /* InventoryDetailsViewController.swift in Sources */,
-				BF3E98B71D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld in Sources */,
-				BF2247421D3678FE0094EE99 /* BaseViewController.swift in Sources */,
-				BF22478C1D3E42300094EE99 /* SeveralResultsViewController.swift in Sources */,
-				BFA98C081D2D481100F0E9FA /* AppDelegate.swift in Sources */,
-				BF3E98A91D464F7900F2C1AF /* DetailsViewController.swift in Sources */,
-				BF3E989E1D3F8A0900F2C1AF /* RequestModel.swift in Sources */,
-				BF3E98A21D3FB71F00F2C1AF /* DepartmentCell.swift in Sources */,
+				BF5A01781D4F701700A990C8 /* LoginViewController.swift in Sources */,
+				BF5A01751D4F701700A990C8 /* SeveralResultsViewController.swift in Sources */,
+				BF5A01571D4F659200A990C8 /* UINavigationBarStyle.swift in Sources */,
+				BF5A01791D4F701700A990C8 /* MenuViewController.swift in Sources */,
+				BF5A01511D4F659200A990C8 /* LogoutButton.swift in Sources */,
+				BF5A01591D4F659200A990C8 /* UITableViewStyle.swift in Sources */,
+				BF5A01761D4F701700A990C8 /* InventoryDetailsViewController.swift in Sources */,
+				BF5A017A1D4F701700A990C8 /* StoreSetupViewController.swift in Sources */,
+				BF5A01731D4F701700A990C8 /* DetailsViewController.swift in Sources */,
+				BFF8B9F21D51D55500827EF1 /* SourceData.swift in Sources */,
+				BF5A01441D4F659200A990C8 /* InventoryEntity.swift in Sources */,
+				BF5A01561D4F659200A990C8 /* StoreCell.swift in Sources */,
+				BF5A01711D4F701700A990C8 /* BaseViewController.swift in Sources */,
+				BF5A01741D4F701700A990C8 /* OneResultViewController.swift in Sources */,
+				BF5A01481D4F659200A990C8 /* StoreData.swift in Sources */,
+				BF5A01771D4F701700A990C8 /* InventoryListViewController.swift in Sources */,
+				BF5A01521D4F659200A990C8 /* QuestionButton.swift in Sources */,
+				BF5A014F1D4F659200A990C8 /* BackButton.swift in Sources */,
+				BF5A01471D4F659200A990C8 /* InventoryData.swift in Sources */,
+				BF5A01451D4F659200A990C8 /* RequestModel.swift in Sources */,
+				BF5A014D1D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodeld in Sources */,
+				BF5A01551D4F659200A990C8 /* InventoryCell.swift in Sources */,
+				BF5A01541D4F659200A990C8 /* InputCell.swift in Sources */,
+				BF5A01461D4F659200A990C8 /* CoreDataManager.swift in Sources */,
+				BF5A017C1D50C99400A990C8 /* InventoryDetailsCell.swift in Sources */,
+				BF5A01581D4F659200A990C8 /* UISwitchStyle.swift in Sources */,
+				BF5A01501D4F659200A990C8 /* ChoiceButton.swift in Sources */,
+				BF5A014C1D4F659200A990C8 /* Constants.swift in Sources */,
+				BF5A01721D4F701700A990C8 /* DepartmentViewController.swift in Sources */,
+				BF5A01391D4F659200A990C8 /* AppDelegate.swift in Sources */,
+				BF5A01531D4F659200A990C8 /* DepartmentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,20 +695,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BFA98C0B1D2D481100F0E9FA /* Main.storyboard */ = {
+		BF5A01211D4F659200A990C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFA98C0C1D2D481100F0E9FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BFA98C101D2D481100F0E9FA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFA98C111D2D481100F0E9FA /* Base */,
+				BF5A01221D4F659200A990C8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5A01231D4F659200A990C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5A01241D4F659200A990C8 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -771,7 +804,7 @@
 			baseConfigurationReference = EFA1D1D67EB4EBFF618E18C0 /* Pods-HarborTouch Inventory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "HarborTouch Inventory/Info.plist";
+				INFOPLIST_FILE = "HarborTouch Inventory/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "i.HarborTouch-Inventory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -783,7 +816,7 @@
 			baseConfigurationReference = 69B47F0808133FAA0F4BF12C /* Pods-HarborTouch Inventory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "HarborTouch Inventory/Info.plist";
+				INFOPLIST_FILE = "HarborTouch Inventory/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "i.HarborTouch-Inventory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -882,14 +915,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BF3E98B51D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodeld */ = {
+		BF5A01271D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BF3E98B61D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodel */,
+				BF5A01281D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodel */,
 			);
-			currentVersion = BF3E98B61D48BAFF00F2C1AF /* HarbourTouch Inventory.xcdatamodel */;
-			name = "HarbourTouch Inventory.xcdatamodeld";
-			path = "../HarbourTouch Inventory.xcdatamodeld";
+			currentVersion = BF5A01281D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodel */;
+			path = "HarbourTouch Inventory.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

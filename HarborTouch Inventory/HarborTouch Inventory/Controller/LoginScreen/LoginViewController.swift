@@ -21,10 +21,7 @@ class LoginViewController: BaseViewController {
     
     @IBAction func onLoginAction(sender: AnyObject) {
         RequestModel.requestInventory(){ (requestResult) -> Void in
-//            InventoryData.deleteInventoryItems()
-//            for item in requestResult {
-//                InventoryData.saveInventoryItems(item)
-//            }
+            CoreDataManager.saveInventoryItems(requestResult)
             self.performSegueWithIdentifier("login", sender: self)
         }
     }

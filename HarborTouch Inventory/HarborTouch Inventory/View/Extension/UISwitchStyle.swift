@@ -10,7 +10,7 @@ import UIKit
 
 extension UISwitch {
     
-    static func applyDefaultSlyle() {
+    static func applyDefaultStyle() {
         appearance().onTintColor = UIColor.init(red: 0/255, green: 191/255, blue: 255/255, alpha: 1)
     }
 }

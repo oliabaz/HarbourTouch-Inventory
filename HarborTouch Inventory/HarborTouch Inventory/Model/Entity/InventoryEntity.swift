@@ -8,9 +8,8 @@
 
 import Foundation
 import CoreData
-//import MagicalRecord
 
-class InventoryData: NSManagedObject {
+class InventoryEntity: NSManagedObject {
 
     @NSManaged var active: NSNumber?
     @NSManaged var color: String?
@@ -40,7 +39,7 @@ class InventoryData: NSManagedObject {
     @NSManaged var usesWeightScale: NSNumber?
     @NSManaged var weighted: NSNumber?
     
-    var inventoryItem: [String: AnyObject]? {
+    var inventoryItem: [String: AnyObject?]? {
         didSet {
             active = inventoryItem?["active"] as? NSNumber
             color = inventoryItem?["color"] as? String
@@ -71,24 +70,4 @@ class InventoryData: NSManagedObject {
             weighted = inventoryItem?["weighted"] as? NSNumber
         }
     }
-    
-//    static func saveInventoryItems(inventory: [String: AnyObject]) {
-//        let inventoryData = InventoryData.MR_createEntity()! as InventoryData
-//        inventoryData.inventoryItem = inventory
-//        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
-//    }
-//    
-//    static func fetchInventoryItems() -> [InventoryData] {
-//        var inventories: [InventoryData]!
-//        inventories = InventoryData.MR_findAll() as! [InventoryData]
-//        return inventories
-//    }
-//    
-//    static func deleteInventoryItems() {
-//        let inventories = InventoryData.fetchInventoryItems()
-//        for inventory in inventories {
-//            inventory.MR_deleteEntity()
-//        }
-//        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
-//    }
 }
