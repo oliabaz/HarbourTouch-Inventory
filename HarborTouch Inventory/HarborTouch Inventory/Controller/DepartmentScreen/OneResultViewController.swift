@@ -12,11 +12,13 @@ class OneResultViewController: DetailsViewController {
 
     @IBOutlet private weak var lowConstraint: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var textField: UITextField!
     var keyboardTextField: UITextField!
     var addButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.hidden = true
                 
         setupNavigationBarButton(.Compose)
         tableView.setupResizingCell()
@@ -30,13 +32,11 @@ class OneResultViewController: DetailsViewController {
         toolbar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 45)
         toolbar.barTintColor = UIColor.blackColor()
         let done = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(onDoneAction))
-        done.setTitleTextAttributes([NSFontAttributeName: (UIFont(name: "HelveticaNeue-Bold", size: 15))!], forState: .Normal)
-        done.tintColor = UIColor.whiteColor()
-        done.setBackgroundImage(UIImage(named: "bigBlueButton"), forState: .Normal, barMetrics: .Default)
+        done.applyDefaultStyle()
         
         toolbar.addSubview(keyboardTextField)
         toolbar.setItems([UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil), done], animated: false)
-        keyboardTextField.inputAccessoryView = toolbar
+        textField.inputAccessoryView = toolbar
     }
 
     func setupNavigationBarButton(style: UIBarButtonSystemItem) {
@@ -58,6 +58,7 @@ class OneResultViewController: DetailsViewController {
             self.view.endEditing(true)
             setupNavigationBarButton(.Compose)
         } else {
+            textField.becomeFirstResponder()
             keyboardTextField.becomeFirstResponder()
             setupNavigationBarButton(.Reply)
         }

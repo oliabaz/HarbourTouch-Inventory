@@ -20,15 +20,18 @@ enum InventoryDetails: Int {
 
 class SourceData {
     
+    func findNextTextField(indexCurrentTextField: Int, inventory: InventoryEntity) -> Int {
+        var indexNextTextField = indexCurrentTextField
+        var type: String
+        repeat {
+            indexNextTextField += 1
+            type = self.inventoryDetailsForIndex(indexNextTextField, inventory: inventory)["type"] as! String
+        } while type != "none"
+        return indexNextTextField
+    }
+    
     static func inventoryForNewItem() -> [String: AnyObject?] {
-        return ["active": 0, "color": "", "cost": nil,
-                "deptOpenKey": 0, "ebtItem": 0, "glyph": "",
-                "inheritTaxes": 0, "isGift": 0, "itemName": "",
-                "itemNotes": "", "itemShortName": "", "itemTags": "",
-                "lookup": "", "minQty": nil, "openItem": 0,
-                "price": nil, "printItem": 0, "qtyOnHand": nil,
-                "tareWeight": 0, "unit": "", "usesWeightScale": 0,
-                "weighted": 0]
+        return ["active": 0, "color": "", "cost": nil, "deptOpenKey": 0, "ebtItem": 0, "glyph": "", "inheritTaxes": 0, "isGift": 0, "itemName": "", "itemNotes": "", "itemShortName": "", "itemTags": "", "lookup": "", "minQty": nil, "openItem": 0, "price": nil, "printItem": 0, "qtyOnHand": nil, "tareWeight": 0, "unit": "", "usesWeightScale": 0, "weighted": 0]
     }
     
     func inventoryDetailsForIndex(index: Int, inventory: InventoryEntity) -> [String: AnyObject?] {
