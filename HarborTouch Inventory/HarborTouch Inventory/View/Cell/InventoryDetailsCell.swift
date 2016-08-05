@@ -18,9 +18,9 @@ protocol InventoryDetailsCellDelegate: class {
 
 class InventoryDetailsCell: UITableViewCell {
 
-    @IBOutlet var keyLabel: UILabel!
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var buttonSwitch: UISwitch!
+    @IBOutlet private var keyLabel: UILabel!
+    @IBOutlet private var textField: UITextField!
+    @IBOutlet private var buttonSwitch: UISwitch!
     
     var cellType: InventoryDetailsType!
     var toolbarTextField: UITextField!
@@ -40,8 +40,7 @@ class InventoryDetailsCell: UITableViewCell {
             setupType(cellType)
             
             let toolbar = UIToolbar()
-            toolbar.sizeToFit()
-            toolbar.frame = CGRect(x: 0, y: 0, width: frame.width, height: 40)
+            toolbar.frame = CGRect(x: 0, y: 0, width: frame.width, height: 45)
             toolbar.barTintColor = UIColor.blackColor()
             
             let prev = UIBarButtonItem(title: "Prev", style: .Done, target: self, action: #selector(onPrevAction))
@@ -56,6 +55,16 @@ class InventoryDetailsCell: UITableViewCell {
         }
     }
     
+    var valueInventoryItem: AnyObject? {
+        get {
+            if buttonSwitch.hidden {
+                return textField.text!
+            } else {
+                return buttonSwitch.on
+            }
+        }
+    }
+    
     func setupType(type: InventoryDetailsType) {
         switch type {
         case .toggle:
@@ -66,6 +75,8 @@ class InventoryDetailsCell: UITableViewCell {
             textField.hidden = false
         }
     }
+    
+    
     
     // MARK: - Actions
     func onPrevAction() {

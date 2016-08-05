@@ -10,8 +10,8 @@ import UIKit
 
 class InventoryCell: UITableViewCell {
 
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
     
     var inventory: InventoryEntity! {
         didSet {

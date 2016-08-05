@@ -12,6 +12,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="inheritTaxes" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isGift" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isSync" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="itemNotes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="itemShortName" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,6 +31,6 @@
         <attribute name="weighted" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="InventoryEntity" positionX="-63" positionY="-18" width="128" height="450"/>
+        <element name="InventoryEntity" positionX="-63" positionY="-18" width="128" height="465"/>
     </elements>
 </model>

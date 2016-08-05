@@ -22,6 +22,7 @@ class InventoryEntity: NSManagedObject {
     @NSManaged var id: NSNumber?
     @NSManaged var inheritTaxes: NSNumber?
     @NSManaged var isGift: NSNumber?
+    @NSManaged var isSync: NSNumber?
     @NSManaged var itemName: String?
     @NSManaged var itemNotes: String?
     @NSManaged var itemShortName: String?
@@ -52,6 +53,7 @@ class InventoryEntity: NSManagedObject {
             id = inventoryItem?["id"] as? NSNumber
             inheritTaxes = inventoryItem?["inheritTaxes"] as? NSNumber
             isGift = inventoryItem?["isGift"] as? NSNumber
+            isSync = 1
             itemName = inventoryItem?["itemName"] as? String
             itemNotes = inventoryItem?["itemNotes"] as? String
             itemShortName = inventoryItem?["itemShortName"] as? String

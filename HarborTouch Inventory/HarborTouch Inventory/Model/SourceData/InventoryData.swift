@@ -25,12 +25,25 @@ class InventoryData {
     }
     
     func removeAtIndex(index: Int) {
-        CoreDataManager.deleteInventoryAtRow(inventories[index])
+        CoreDataManager.deleteInventoryItemAtRow(inventories[index])
         inventories = CoreDataManager.fetchInventoryItems()
     }
     
     func addInventory() {
-        CoreDataManager.addInventory()
+        CoreDataManager.addInventoryItem()
         inventories = CoreDataManager.fetchInventoryItems()
+    }
+    
+    func editNewInventoryItem() -> InventoryEntity {
+        return inventories.last!
+    }
+    
+    func deleteNewInventoryItem() {
+        CoreDataManager.deleteInventoryItemAtRow(inventories[inventories.count - 1])
+        inventories = CoreDataManager.fetchInventoryItems()
+    }
+    
+    func saveInventoryItem(inventory: InventoryEntity) {
+        CoreDataManager.saveInventoryItem(inventory)
     }
 }

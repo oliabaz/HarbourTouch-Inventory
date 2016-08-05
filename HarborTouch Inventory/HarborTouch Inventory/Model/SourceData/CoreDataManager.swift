@@ -29,7 +29,7 @@ class CoreDataManager {
         saveContext()
     }
     
-    static func deleteInventoryAtRow(inventory: InventoryEntity) {
+    static func deleteInventoryItemAtRow(inventory: InventoryEntity) {
         inventory.MR_deleteEntity()
         saveContext()
     }
@@ -44,9 +44,16 @@ class CoreDataManager {
         return inventories
     }
     
-    static func addInventory() {
+    static func addInventoryItem() {
         let inventoryEntity = InventoryEntity.MR_createEntity()! as InventoryEntity
         inventoryEntity.inventoryItem = SourceData.inventoryForNewItem()
+        saveContext()
+    }
+    
+    static func saveInventoryItem(inventory: InventoryEntity) {
+        var inventoryEntity = InventoryEntity.MR_createEntity()! as InventoryEntity
+//
+        inventory.MR_deleteEntity()
         saveContext()
     }
 }

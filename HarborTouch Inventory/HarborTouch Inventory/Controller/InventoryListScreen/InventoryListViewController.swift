@@ -11,7 +11,7 @@ import UIKit
 class InventoryListViewController: BaseViewController {
     
     var inventory = InventoryData()
-    var choosenInventory: InventoryEntity!
+    var editInventory: InventoryEntity!
     
     @IBOutlet var tableView: UITableView!
     
@@ -24,16 +24,16 @@ class InventoryListViewController: BaseViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "inventoryDetails" {
             let destinationVC = segue.destinationViewController as! InventoryDetailsViewController
-            destinationVC.inventory = choosenInventory
+            destinationVC.inventory = editInventory
+            destinationVC.delegate = self
         }
     }
     
     // MARK: - Actions
     @IBAction func onAddAction(sender: AnyObject) {
         inventory.addInventory()
-        let alertController = UIAlertController(title: "New inventory", message: "New inventory is added", preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion: { self.tableView.reloadData() })
+        editInventory = inventory.editNewInventoryItem()
+        self.performSegueWithIdentifier("inventoryDetails", sender: self)
     }
 }
     // MARK: - UITableViewDataSource
@@ -54,7 +54,7 @@ extension InventoryListViewController: UITableViewDataSource {
 extension InventoryListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        choosenInventory = inventory.itemForIndex(indexPath.row)
+        editInventory = inventory.itemForIndex(indexPath.row)
         self.performSegueWithIdentifier("inventoryDetails", sender: self)
     }
     
@@ -69,5 +69,16 @@ extension InventoryListViewController: UITableViewDelegate {
             inventory.removeAtIndex(indexPath.row)
             tableView.endUpdates()
         }
+    }
+}
+
+    // MARK: - InventoryDetailsControllerDelegate
+extension InventoryListViewController: InventoryDetailsControllerDelegate {
+    func deleteEmptyInventoryItem() {
+        inventory.deleteNewInventoryItem()
+    }
+    
+    func saveInventoryItem(inventory: InventoryEntity) {
+        self.inventory.saveInventoryItem(inventory)
     }
 }

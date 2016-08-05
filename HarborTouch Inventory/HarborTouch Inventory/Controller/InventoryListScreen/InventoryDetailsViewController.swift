@@ -8,25 +8,52 @@
 
 import UIKit
 
+protocol InventoryDetailsControllerDelegate: class {
+    func deleteEmptyInventoryItem()
+    func saveInventoryItem(inventory: InventoryEntity)
+}
+
 class InventoryDetailsViewController: BaseViewController {
     
     var inventory: InventoryEntity!
     let sourceData = SourceData()
+    weak var delegate: InventoryDetailsControllerDelegate?
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Inventory Details"
+        
+        let save = UIBarButtonItem(title: "Save", style: .Done, target: self, action: #selector(onSaveAction))
+        save.applyDefaultStyle()
+        
+        self.navigationItem.setRightBarButtonItem(save, animated: true)
         setupKeyboardNotifications()
     }
     
+    // MARK: - Actions
+    func onSaveAction() {
+        delegate?.saveInventoryItem(inventory)
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    // MARK: - Override
     override func adjustingHeight(show: Bool, notification: NSNotification) {
-//        if show {
-//            tableView.frame.size.height = tableView.frame.height - (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
-//        } else {
-//            tableView.frame.size.height = tableView.frame.height + (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
-//        }
+        let userInfo = notification.userInfo!
+        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardViewEndFrame = view.convertRect(keyboardScreenEndFrame, fromView: view.window)
+        
+        if notification.name == UIKeyboardWillHideNotification {
+            tableView.contentInset = UIEdgeInsetsZero
+        } else {
+            tableView.contentInset = UIEdgeInsetsMake(0, 0, keyboardViewEndFrame.height, 0)
+        }
+    }
+    
+    override func backAction() {
+        super.backAction()
+        delegate?.deleteEmptyInventoryItem()
     }
 }
 
@@ -49,11 +76,8 @@ extension InventoryDetailsViewController: UITableViewDataSource {
 
     // MARK: - InventoryDetailsCellDelegate
 extension InventoryDetailsViewController: InventoryDetailsCellDelegate {
-    
+
     func inventoryDetailsCellNextTextField(indexCurrentCell: Int) {
-        let indexNextCell = sourceData.findNextTextField(indexCurrentCell, inventory: inventory)
-        let indexPath = NSIndexPath(forRow: indexNextCell, inSection: 0)
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! InventoryDetailsCell
-        cell.textField.becomeFirstResponder()
+        
     }
 }

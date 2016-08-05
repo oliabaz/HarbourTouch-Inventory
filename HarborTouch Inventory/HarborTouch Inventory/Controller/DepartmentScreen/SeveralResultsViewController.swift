@@ -22,10 +22,14 @@ class SeveralResultsViewController: DetailsViewController {
     }
     
     override func adjustingHeight(show: Bool, notification: NSNotification) {
-        if show {
-            tableView.frame.size.height = tableView.frame.height - (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
+        let userInfo = notification.userInfo!
+        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardViewEndFrame = view.convertRect(keyboardScreenEndFrame, fromView: view.window)
+        
+        if notification.name == UIKeyboardWillHideNotification {
+            tableView.contentInset = UIEdgeInsetsZero
         } else {
-            tableView.frame.size.height = tableView.frame.height + (notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size.height)!
+            tableView.contentInset = UIEdgeInsetsMake(0, 0, keyboardViewEndFrame.height, 0)
         }
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class DepartmentCell: UITableViewCell {
 
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
 
     var department: String? {
         didSet {
