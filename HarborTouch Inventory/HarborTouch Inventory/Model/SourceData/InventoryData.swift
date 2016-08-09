@@ -39,11 +39,11 @@ class InventoryData {
     }
     
     func deleteNewInventoryItem() {
-        CoreDataManager.deleteInventoryItemAtRow(inventories[inventories.count - 1])
+        CoreDataManager.deleteInventoryItemAtRow(inventories.last!)
         inventories = CoreDataManager.fetchInventoryItems()
     }
     
-    func saveInventoryItem(inventory: InventoryEntity) {
-        CoreDataManager.saveInventoryItem(inventory)
+    func saveInventoryItem(inventory: InventoryEntity, additionalInventory: AdditionalInventory) {
+        CoreDataManager.saveInventoryItem(inventory, additionalInventory: additionalInventory)
     }
 }

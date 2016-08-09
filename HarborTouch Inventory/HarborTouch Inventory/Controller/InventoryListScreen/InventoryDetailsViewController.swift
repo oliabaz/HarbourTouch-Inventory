@@ -10,12 +10,14 @@ import UIKit
 
 protocol InventoryDetailsControllerDelegate: class {
     func deleteEmptyInventoryItem()
-    func saveInventoryItem(inventory: InventoryEntity)
+    func saveInventoryItem(inventory: InventoryEntity, additionalInventory: AdditionalInventory)
 }
 
 class InventoryDetailsViewController: BaseViewController {
     
     var inventory: InventoryEntity!
+    var additionalInventory: AdditionalInventory!
+    var new = true
     let sourceData = SourceData()
     weak var delegate: InventoryDetailsControllerDelegate?
     
@@ -30,11 +32,24 @@ class InventoryDetailsViewController: BaseViewController {
         
         self.navigationItem.setRightBarButtonItem(save, animated: true)
         setupKeyboardNotifications()
+        additionalInventory = AdditionalInventory(inventory: inventory)
     }
     
     // MARK: - Actions
     func onSaveAction() {
-        delegate?.saveInventoryItem(inventory)
+        if additionalInventory.itemName == "" {
+            let alertController = UIAlertController(title: "Item name is empty", message: "Do you want to continue? Current changes won't be saved.", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+            alertController.addAction(UIAlertAction(title:  "Continue", style: .Default, handler: { (alert: UIAlertAction) in
+                if self.new {
+                    self.delegate?.deleteEmptyInventoryItem()
+                }
+                self.navigationController?.popViewControllerAnimated(true)
+            }))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            delegate?.saveInventoryItem(inventory, additionalInventory: additionalInventory)
+        }
         navigationController?.popViewControllerAnimated(true)
     }
     
@@ -52,8 +67,10 @@ class InventoryDetailsViewController: BaseViewController {
     }
     
     override func backAction() {
-        super.backAction()
-        delegate?.deleteEmptyInventoryItem()
+        if new {
+            delegate?.deleteEmptyInventoryItem()
+        }
+        navigationController?.popViewControllerAnimated(true)
     }
 }
 
@@ -67,17 +84,72 @@ extension InventoryDetailsViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("inventoryDetailCell") as! InventoryDetailsCell
         cell.backgroundView = tableView.setupCellBackground(indexPath)
-        cell.inventoryItem = sourceData.inventoryDetailsForIndex(indexPath.row, inventory: inventory)
+        cell.inventoryItem = sourceData.inventoryDetailsForIndex(indexPath.row, inventory: additionalInventory)
         cell.delegate = self
-        cell.tag = indexPath.row
         return cell
     }
 }
 
     // MARK: - InventoryDetailsCellDelegate
 extension InventoryDetailsViewController: InventoryDetailsCellDelegate {
-
-    func inventoryDetailsCellNextTextField(indexCurrentCell: Int) {
+    
+    func inventoryDetailsCellOnNextAction() {
         
+    }
+    
+    func inventoryDetailsCellTextField(text: String, key: String) {
+        switch InventoryKeys(rawValue: key)! {
+        case .itemName:
+            additionalInventory.itemName = text
+        case .itemShortName:
+            additionalInventory.itemShortName = text
+        case .color:
+            additionalInventory.color = text
+        case .cost:
+            additionalInventory.cost = NSNumberFormatter().numberFromString(text)
+        case .glyph:
+            additionalInventory.glyph = text
+        case .itemNotes:
+            additionalInventory.itemNotes = text
+        case .itemTags:
+            additionalInventory.itemTags = text
+        case .lookup:
+            additionalInventory.lookup = text
+        case .minQty:
+            additionalInventory.minQty = NSNumberFormatter().numberFromString(text)
+        case .price:
+            additionalInventory.price = NSNumberFormatter().numberFromString(text)
+        case .qtyOnHand:
+            additionalInventory.qtyOnHand = NSNumberFormatter().numberFromString(text)
+        case .unit:
+            additionalInventory.unit = text
+        default:
+            break
+        }
+    }
+    
+    func inventoryDetailsCellButtonSwitch(on: Bool, key: String) {
+        switch InventoryKeys(rawValue: key)! {
+        case .active:
+            additionalInventory.active = on
+        case .deptOpenKey:
+            additionalInventory.deptOpenKey = on
+        case .ebtItem:
+            additionalInventory.ebtItem = on
+        case .inheritTaxes:
+            additionalInventory.inheritTaxes = on
+        case .isGift:
+            additionalInventory.isGift = on
+        case .openItem:
+            additionalInventory.openItem = on
+        case .tareWeight:
+            additionalInventory.tareWeight = on
+        case .usesWeightScale:
+            additionalInventory.usesWeightScale = on
+        case .weighted:
+            additionalInventory.weighted = on
+        default:
+            break
+        }
     }
 }

@@ -18,17 +18,19 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func onLoginAction(sender: AnyObject) {
+        activityIndicator.startAnimating()
         RequestModel.requestInventory(){ (requestResult) -> Void in
             CoreDataManager.saveInventoryItems(requestResult)
+            self.activityIndicator.stopAnimating()
             self.performSegueWithIdentifier("login", sender: self)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
         

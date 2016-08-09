@@ -44,6 +44,7 @@
 		BF5A017C1D50C99400A990C8 /* InventoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A017B1D50C99400A990C8 /* InventoryDetailsCell.swift */; };
 		BFF8B9F21D51D55500827EF1 /* SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8B9F11D51D55500827EF1 /* SourceData.swift */; };
 		BFF8B9F41D535B7600827EF1 /* UIBarButtonItemStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8B9F31D535B7600827EF1 /* UIBarButtonItemStyle.swift */; };
+		BFF8B9F61D587D2800827EF1 /* AdditionalInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8B9F51D587D2800827EF1 /* AdditionalInventory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		BFC8DBCB1D48CE4B00DCAF7D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/HarborTouch_Inventory-gllhtxfcebunxfbhsqeenqupmhua/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		BFF8B9F11D51D55500827EF1 /* SourceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceData.swift; sourceTree = "<group>"; };
 		BFF8B9F31D535B7600827EF1 /* UIBarButtonItemStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemStyle.swift; sourceTree = "<group>"; };
+		BFF8B9F51D587D2800827EF1 /* AdditionalInventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalInventory.swift; sourceTree = "<group>"; };
 		E3CFCB64551B85EA93B08156 /* Pods-HarborTouch InventoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch InventoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch InventoryUITests/Pods-HarborTouch InventoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFA1D1D67EB4EBFF618E18C0 /* Pods-HarborTouch Inventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarborTouch Inventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HarborTouch Inventory/Pods-HarborTouch Inventory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,10 +203,11 @@
 		BF5A011B1D4F659200A990C8 /* SourceData */ = {
 			isa = PBXGroup;
 			children = (
+				BF5A011E1D4F659200A990C8 /* StoreData.swift */,
 				BF5A011C1D4F659200A990C8 /* CoreDataManager.swift */,
 				BF5A011D1D4F659200A990C8 /* InventoryData.swift */,
 				BFF8B9F11D51D55500827EF1 /* SourceData.swift */,
-				BF5A011E1D4F659200A990C8 /* StoreData.swift */,
+				BFF8B9F51D587D2800827EF1 /* AdditionalInventory.swift */,
 			);
 			path = SourceData;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				BF5A01521D4F659200A990C8 /* QuestionButton.swift in Sources */,
 				BF5A014F1D4F659200A990C8 /* BackButton.swift in Sources */,
 				BF5A01471D4F659200A990C8 /* InventoryData.swift in Sources */,
+				BFF8B9F61D587D2800827EF1 /* AdditionalInventory.swift in Sources */,
 				BF5A01451D4F659200A990C8 /* RequestModel.swift in Sources */,
 				BF5A014D1D4F659200A990C8 /* HarbourTouch Inventory.xcdatamodeld in Sources */,
 				BF5A01551D4F659200A990C8 /* InventoryCell.swift in Sources */,

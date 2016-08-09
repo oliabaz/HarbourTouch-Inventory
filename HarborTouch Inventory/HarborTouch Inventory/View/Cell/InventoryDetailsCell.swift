@@ -13,7 +13,9 @@ enum InventoryDetailsType: String {
 }
 
 protocol InventoryDetailsCellDelegate: class {
-    func inventoryDetailsCellNextTextField(curentTag: Int)
+    func inventoryDetailsCellTextField(text: String, key: String)
+    func inventoryDetailsCellButtonSwitch(on: Bool, key: String)
+    func inventoryDetailsCellOnNextAction()
 }
 
 class InventoryDetailsCell: UITableViewCell {
@@ -23,7 +25,6 @@ class InventoryDetailsCell: UITableViewCell {
     @IBOutlet private var buttonSwitch: UISwitch!
     
     var cellType: InventoryDetailsType!
-    var toolbarTextField: UITextField!
     weak var delegate: InventoryDetailsCellDelegate?
 
     var inventoryItem: [String: AnyObject?]? {
@@ -38,6 +39,7 @@ class InventoryDetailsCell: UITableViewCell {
             }
             cellType = InventoryDetailsType(rawValue: (inventoryItem!["type"]! as? String)!)
             setupType(cellType)
+            buttonSwitch.addTarget(self, action: #selector(onSwitchAction), forControlEvents: .ValueChanged)
             
             let toolbar = UIToolbar()
             toolbar.frame = CGRect(x: 0, y: 0, width: frame.width, height: 45)
@@ -55,16 +57,6 @@ class InventoryDetailsCell: UITableViewCell {
         }
     }
     
-    var valueInventoryItem: AnyObject? {
-        get {
-            if buttonSwitch.hidden {
-                return textField.text!
-            } else {
-                return buttonSwitch.on
-            }
-        }
-    }
-    
     func setupType(type: InventoryDetailsType) {
         switch type {
         case .toggle:
@@ -76,18 +68,28 @@ class InventoryDetailsCell: UITableViewCell {
         }
     }
     
-    
-    
     // MARK: - Actions
+    func onSwitchAction() {
+        delegate?.inventoryDetailsCellButtonSwitch(self.buttonSwitch.on, key: keyLabel.text!)
+    }
+    
     func onPrevAction() {
         
     }
     
     func onNextAction() {
-        delegate?.inventoryDetailsCellNextTextField(self.tag)
+        delegate?.inventoryDetailsCellOnNextAction()
     }
     
     func onDoneAction() {
         textField.resignFirstResponder()
+    }
+}
+
+    // MARK: - UITextFieldDelegate
+extension InventoryDetailsCell: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        delegate?.inventoryDetailsCellTextField(textField.text!, key: keyLabel.text!)
     }
 }

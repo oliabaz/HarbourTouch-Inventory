@@ -12,6 +12,7 @@ class InventoryListViewController: BaseViewController {
     
     var inventory = InventoryData()
     var editInventory: InventoryEntity!
+    var new: Bool!
     
     @IBOutlet var tableView: UITableView!
     
@@ -25,6 +26,7 @@ class InventoryListViewController: BaseViewController {
         if segue.identifier == "inventoryDetails" {
             let destinationVC = segue.destinationViewController as! InventoryDetailsViewController
             destinationVC.inventory = editInventory
+            destinationVC.new = new
             destinationVC.delegate = self
         }
     }
@@ -33,6 +35,7 @@ class InventoryListViewController: BaseViewController {
     @IBAction func onAddAction(sender: AnyObject) {
         inventory.addInventory()
         editInventory = inventory.editNewInventoryItem()
+        new = true
         self.performSegueWithIdentifier("inventoryDetails", sender: self)
     }
 }
@@ -50,11 +53,13 @@ extension InventoryListViewController: UITableViewDataSource {
         return cell
     }
 }
+
     // MARK: - UITableViewDelegate
 extension InventoryListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         editInventory = inventory.itemForIndex(indexPath.row)
+        new = false
         self.performSegueWithIdentifier("inventoryDetails", sender: self)
     }
     
@@ -78,7 +83,8 @@ extension InventoryListViewController: InventoryDetailsControllerDelegate {
         inventory.deleteNewInventoryItem()
     }
     
-    func saveInventoryItem(inventory: InventoryEntity) {
-        self.inventory.saveInventoryItem(inventory)
+    func saveInventoryItem(inventory: InventoryEntity, additionalInventory: AdditionalInventory) {
+        self.inventory.saveInventoryItem(inventory, additionalInventory: additionalInventory)
+        tableView.reloadData()
     }
 }

@@ -7,13 +7,12 @@
 //
 
 import Foundation
-import CoreData
 import MagicalRecord
 
 class CoreDataManager {
     
     static func saveInventoryItems(inventories: [[String: AnyObject]]) {
-        CoreDataManager.deleteInventoryItems()
+        CoreDataManager.deleteSyncInventoryItems()
         for inventory in inventories {
             let inventoryEntity = InventoryEntity.MR_createEntity()! as InventoryEntity
             inventoryEntity.inventoryItem = inventory
@@ -21,8 +20,8 @@ class CoreDataManager {
         saveContext()
     }
     
-    static func deleteInventoryItems() {
-        let inventories = CoreDataManager.fetchInventoryItems()
+    static func deleteSyncInventoryItems() {
+        let inventories = CoreDataManager.fetchSyncInventoryItems()
         for inventory in inventories {
             inventory.MR_deleteEntity()
         }
@@ -39,8 +38,14 @@ class CoreDataManager {
     }
     
     static func fetchInventoryItems() -> [InventoryEntity] {
-        var inventories: [InventoryEntity]!
+        var inventories: [InventoryEntity]
         inventories = InventoryEntity.MR_findAll() as! [InventoryEntity]
+        return inventories
+    }
+    
+    static func fetchSyncInventoryItems() -> [InventoryEntity] {
+        var inventories: [InventoryEntity]
+        inventories = InventoryEntity.MR_findByAttribute("isSync", withValue: 1) as! [InventoryEntity]
         return inventories
     }
     
@@ -50,10 +55,8 @@ class CoreDataManager {
         saveContext()
     }
     
-    static func saveInventoryItem(inventory: InventoryEntity) {
-        var inventoryEntity = InventoryEntity.MR_createEntity()! as InventoryEntity
-//
-        inventory.MR_deleteEntity()
+    static func saveInventoryItem(inventory: InventoryEntity, additionalInventory: AdditionalInventory) {
+        inventory.inventoryItem = additionalInventory.setupCurrentValue()
         saveContext()
     }
 }

@@ -18,13 +18,17 @@ enum InventoryDetails: Int {
     }()
 }
 
+enum InventoryKeys: String {
+    case itemName = "ItemName", itemShortName = "ItemShortName", active = "Active", color = "Color", cost = "Cost", deptOpenKey = "DeptOpenKey", ebtItem = "EbtItem", glyph = "Glyph", inheritTaxes = "InheritTaxes", isGift = "IsGift", itemNotes = "ItemNotes", itemTags = "ItemTags", lookup = "Lookup", minQty = "MinQty", openItem = "OpenItem", price = "Price", printItem = "PrintItem", qtyOnHand = "QtyOnHand", tareWeight = "TareWeight", unit = "Unit", usesWeightScale = "UsesWeightScale", weighted = "Weighted"
+}
+
 class SourceData {
     
     static func inventoryForNewItem() -> [String: AnyObject?] {
         return ["active": 0, "color": "", "cost": nil, "deptOpenKey": 0, "ebtItem": 0, "glyph": "", "inheritTaxes": 0, "isGift": 0, "isSync": 0, "itemName": "", "itemNotes": "", "itemShortName": "", "itemTags": "", "lookup": "", "minQty": nil, "openItem": 0, "price": nil, "printItem": 0, "qtyOnHand": nil, "tareWeight": 0, "unit": "", "usesWeightScale": 0, "weighted": 0]
     }
     
-    func inventoryDetailsForIndex(index: Int, inventory: InventoryEntity) -> [String: AnyObject?] {
+    func inventoryDetailsForIndex(index: Int, inventory: AdditionalInventory) -> [String: AnyObject?] {
         switch InventoryDetails(rawValue: index)! {
         case .active:
             return ["key": "Active",
@@ -40,7 +44,7 @@ class SourceData {
                     "type": "none"]
             
         case .deptOpenKey:
-            return ["key": "CeptOpenKey",
+            return ["key": "DeptOpenKey",
                     "value": inventory.deptOpenKey,
                     "type": "toggle"]
             
@@ -133,7 +137,6 @@ class SourceData {
             return ["key": "Weighted",
                     "value": inventory.weighted,
                     "type": "toggle"]
-            
         }
     }
 }

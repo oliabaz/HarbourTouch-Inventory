@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applyStyle() {
         UINavigationBar.applyDefaultStyle()
         UISwitch.applyDefaultStyle()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
 }
 

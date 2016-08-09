@@ -53,7 +53,11 @@ class InventoryEntity: NSManagedObject {
             id = inventoryItem?["id"] as? NSNumber
             inheritTaxes = inventoryItem?["inheritTaxes"] as? NSNumber
             isGift = inventoryItem?["isGift"] as? NSNumber
-            isSync = 1
+            if inventoryItem?["isSync"] != nil {
+                isSync = 0
+            } else {
+                isSync = 1
+            }
             itemName = inventoryItem?["itemName"] as? String
             itemNotes = inventoryItem?["itemNotes"] as? String
             itemShortName = inventoryItem?["itemShortName"] as? String
